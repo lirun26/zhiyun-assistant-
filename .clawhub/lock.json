@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "skills": {
+    "skill-finder-cn": {
+      "version": "1.0.0",
+      "installedAt": 1773469560741
+    },
+    "self-improving-agent": {
+      "version": "3.0.2",
+      "installedAt": 1773470234110
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1773470281875
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1773470403120
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1773470407647
+    },
+    "openclaw-backup": {
+      "version": "1.0.0",
+      "installedAt": 1773470463106
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1773470522259
+    },
+    "openclaw-tavily-search": {
+      "version": "0.1.0",
+      "installedAt": 1773470581419
+    },
+    "rss-ai-reader": {
+      "version": "1.0.0",
+      "installedAt": 1773471481073
+    },
+    "ai-news-collectors": {
+      "version": "1.0.0",
+      "installedAt": 1773471485746
+    },
+    "news-aggregator": {
+      "version": "1.0.3",
+      "installedAt": 1773471542828
+    },
+    "rss-aggregator": {
+      "version": "1.0.2",
+      "installedAt": 1773471723230
+    },
+    "daily-hot-push": {
+      "version": "1.0.0",
+      "installedAt": 1773471781947
+    },
+    "hot-news-aggregator": {
+      "version": "1.0.0",
+      "installedAt": 1773471841288
+    },
+    "ai-news-zh": {
+      "version": "1.0.0",
+      "installedAt": 1773471847243
+    },
+    "openclaw-shield": {
+      "version": "1.0.3",
+      "installedAt": 1773472730678
+    },
+    "openclaw-ops-guardrails": {
+      "version": "0.1.1",
+      "installedAt": 1773472738979
+    },
+    "openclaw-cli": {
+      "version": "1.0.0",
+      "installedAt": 1773472757813
+    },
+    "skill-guard": {
+      "version": "1.0.2",
+      "installedAt": 1773472774552
+    },
+    "skill-builder": {
+      "version": "1.0.5",
+      "installedAt": 1773472779556
+    },
+    "self-evolving-skill": {
+      "version": "1.0.2",
+      "installedAt": 1773472784581
+    },
+    "skill-scanner": {
+      "version": "0.1.2",
+      "installedAt": 1773472789650
+    },
+    "auto-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1773472797457
+    },
+    "auto-workflow": {
+      "version": "1.0.0",
+      "installedAt": 1773472809627
+    },
+    "browser-automation": {
+      "version": "1.0.1",
+      "installedAt": 1773472826413
+    },
+    "ai-web-automation": {
+      "version": "1.0.0",
+      "installedAt": 1773472846310
+    },
+    "multi-search-engine-2-0-1": {
+      "version": "1.0.0",
+      "installedAt": 1773472859487
+    },
+    "file-summary": {
+      "version": "1.0.0",
+      "installedAt": 1773472864502
+    },
+    "file-organizer-zh": {
+      "version": "1.0.0",
+      "installedAt": 1773472868957
+    },
+    "afrexai-productivity-system": {
+      "version": "1.0.0",
+      "installedAt": 1773472892012
+    },
+    "git-cli": {
+      "version": "1.0.0",
+      "installedAt": 1773472911009
+    },
+    "visual-file-sorter": {
+      "version": "0.1.0",
+      "installedAt": 1773472923505
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1773472927906
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1773472936332
+    },
+    "tavily-web-search-for-openclaw": {
+      "version": "1.0.0",
+      "installedAt": 1773493578817
+    },
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1773493608608
+    },
+    "sonos": {
+      "version": "1.0.0",
+      "installedAt": 1773493644684
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1773493664788
+    },
+    "nano-pdf": {
+      "version": "1.0.0",
+      "installedAt": 1773493681423
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1773493689600
+    },
+    "ai-humanizer": {
+      "version": "2.1.0",
+      "installedAt": 1773493710778
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1773493761356
+    },
+    "youtube-transcribe": {
+      "version": "1.0.0",
+      "installedAt": 1773493787802
+    },
+    "brave-search": {
+      "version": "1.0.1",
+      "installedAt": 1773493795452
+    },
+    "mcp-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773493821353
+    },
+    "crypto-trading-bot": {
+      "version": "1.0.0",
+      "installedAt": 1773494400721
+    },
+    "day-trading-skill": {
+      "version": "1.2.2",
+      "installedAt": 1773494412334
+    },
+    "akshare-stock": {
+      "version": "1.0.1",
+      "installedAt": 1773494451697
+    },
+    "portfolio-tracker": {
+      "version": "0.0.1",
+      "installedAt": 1773494459268
+    },
+    "business-plan": {
+      "version": "0.1.0",
+      "installedAt": 1773494471626
+    },
+    "ai-side-hustle-agent": {
+      "version": "1.0.0",
+      "installedAt": 1773494517008
+    },
+    "freelance": {
+      "version": "1.0.0",
+      "installedAt": 1773494523250
+    },
+    "xiaohongshu-deep-research": {
+      "version": "1.2.1",
+      "installedAt": 1773495288256
+    },
+    "xiaohongshu-mcp-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773495300504
+    },
+    "dingtalk-push": {
+      "version": "0.1.0",
+      "installedAt": 1773500114861
+    },
+    "dingtalk-setup": {
+      "version": "1.0.0",
+      "installedAt": 1773500199463
+    },
+    "xiaohongshu-ai-money-guide": {
+      "version": "0.1.0",
+      "installedAt": 1773504665150
+    },
+    "openclaw-money-playbook": {
+      "version": "1.0.0",
+      "installedAt": 1773504683401
+    },
+    "freelance-proposal-engine": {
+      "version": "1.0.0",
+      "installedAt": 1773504688449
+    },
+    "ai-video-script": {
+      "version": "1.0.0",
+      "installedAt": 1773504803938
+    },
+    "tiktok-viral-predictor": {
+      "version": "1.0.0",
+      "installedAt": 1773504808275
+    },
+    "amazon-niche-finder": {
+      "version": "1.1.0",
+      "installedAt": 1773504825026
+    },
+    "video-downloader-skill": {
+      "version": "1.0.1",
+      "installedAt": 1773504829369
+    }
+  }
+}
