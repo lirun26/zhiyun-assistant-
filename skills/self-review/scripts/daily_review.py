@@ -41,6 +41,68 @@ def run_ai_evolution_evolve():
     else:
         print("⚠️ ai-evolution-engine-v2 未安装")
 
+def run_evolution_state_analyzer():
+    """运行 Evolution State Analyzer - 检测进化停滞"""
+    print("\n📊 运行 Evolution State Analyzer...")
+    analyzer_script = f"{WORKSPACE}/skills/evolution-state-analyzer/index.js"
+    if os.path.exists(analyzer_script):
+        import subprocess
+        result = subprocess.run(
+            ["node", analyzer_script],
+            capture_output=True, text=True,
+            cwd=WORKSPACE
+        )
+        if result.stdout:
+            try:
+                data = json.loads(result.stdout)
+                stagnation = data.get('stagnation_detected', False)
+                success_rate = data.get('overall_success_rate', 0)
+                print(f"   进化周期: {data.get('total_cycles', 0)}")
+                print(f"   成功率: {success_rate*100:.0f}%")
+                print(f"   停滞检测: {'⚠️ 是' if stagnation else '✅ 否'}")
+                if data.get('recommendations'):
+                    print(f"   建议: {data['recommendations'][0]}")
+                return data
+            except:
+                print(result.stdout[:500])
+        if result.stderr:
+            print(f"   错误: {result.stderr[:200]}")
+    else:
+        print("⚠️ evolution-state-analyzer 未安装")
+    return None
+
+def run_evolution_drift_detector():
+    """运行 Evolution Drift Detector - 检测技能漂移"""
+    print("\n🔍 运行 Evolution Drift Detector...")
+    detector_file = f"{WORKSPACE}/skills/evolution-drift-detector/SKILL.md"
+    if os.path.exists(detector_file):
+        print("   技能漂移检测已就绪（需要人工审核）")
+        print(f"   位置: {detector_file}")
+        # 可以扩展为自动检测 skill 文件变化
+    else:
+        print("⚠️ evolution-drift-detector 未安装")
+    return None
+
+def run_memory_pruner():
+    """运行 Memory Pruner - 记忆断舍离"""
+    print("\n🧹 运行 Memory Pruner...")
+    pruner_script = f"{WORKSPACE}/skills/memory-pruner/analyze.mjs"
+    if os.path.exists(pruner_script):
+        import subprocess
+        result = subprocess.run(
+            ["node", pruner_script],
+            capture_output=True, text=True,
+            cwd=WORKSPACE
+        )
+        if result.stdout:
+            # 只显示关键行
+            lines = result.stdout.split('\n')
+            for line in lines:
+                if any(x in line for x in ['KEEP', 'DISCARD', 'ARCHIVE', '建议', '记忆统计']):
+                    print(f"   {line.strip()}")
+    else:
+        print("⚠️ memory-pruner 未安装")
+
 def get_conversation_count():
     """获取今日对话数"""
     sessions_dir = os.path.expanduser("~/.openclaw/sessions")
@@ -260,7 +322,16 @@ def run_self_review():
     # 5. 运行 Evolution Engine 进化
     run_ai_evolution_evolve()
     
-    # 6. 保存日志
+    # 6. 运行 Evolution State Analyzer
+    run_evolution_state_analyzer()
+    
+    # 7. 运行 Evolution Drift Detector
+    run_evolution_drift_detector()
+    
+    # 8. 运行 Memory Pruner
+    run_memory_pruner()
+    
+    # 9. 保存日志
     print("\n💾 保存进化日志...")
     log_file = save_evolution_log(today, analysis, improvements)
     
