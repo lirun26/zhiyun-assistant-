@@ -15,7 +15,7 @@ import { fileURLToPath } from 'url';
 import { analyzeMemories } from './scorer.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const WORKSPACE = path.join(__dirname, '../../..');
+const WORKSPACE = path.resolve(__dirname, '../..');
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run') || !args.includes('--confirm');

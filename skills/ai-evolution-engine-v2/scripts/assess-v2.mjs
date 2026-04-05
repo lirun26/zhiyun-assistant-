@@ -11,8 +11,10 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const WORKSPACE = '../../..';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const WORKSPACE = path.resolve(__dirname, '../../..');
 
 console.log('🧬 AI Evolution Engine v2 - 自我评估\n');
 console.log('='.repeat(50));

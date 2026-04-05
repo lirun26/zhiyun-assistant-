@@ -16,8 +16,10 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-const WORKSPACE = '../../..';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const WORKSPACE = path.resolve(__dirname, '../../..');
 const AUTOAGENT_LOOP = path.join(WORKSPACE, 'skills', 'autoagent-loop');
 const RESULTS_FILE = path.join(AUTOAGENT_LOOP, 'results.tsv');
 

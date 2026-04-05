@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 import { analyzeMemories } from './scorer.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const WORKSPACE = path.join(__dirname, '../../..');
+const WORKSPACE = path.resolve(__dirname, '../..');
 
 console.log('\n🧹 Memory Pruner - 记忆质量分析\n');
 console.log('='.repeat(50));
