@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "xiaohongshu": {
+      "baseUrl": "http://localhost:18060/mcp"
+    },
+    "openspace": {
+      "command": "openspace-mcp",
+      "description": "OpenSpace self-evolving agent framework",
+      "env": {
+        "OPENSPACE_HOST_SKILL_DIRS": "/home/admin/.openclaw/workspace/skills",
+        "OPENSPACE_WORKSPACE": "/home/admin/OpenSpace",
+        "OPENAI_API_KEY": ""
+      }
+    }
+  },
+  "imports": []
+}

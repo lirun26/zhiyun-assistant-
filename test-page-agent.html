@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Agent 测试</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        .demo-box {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .btn {
+            background: #0066ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .btn:hover { background: #0052cc; }
+        .btn-secondary { background: #6c757d; }
+        .btn-secondary:hover { background: #5a6268; }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        .info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Page Agent 测试</h1>
+        
+        <div class="info">
+            <strong>说明：</strong> Page Agent 是阿里开源的网页AI Agent，可以用自然语言操控网页元素。
+        </div>
+
+        <!-- 测试表单 -->
+        <div class="demo-box">
+            <h3>测试表单</h3>
+            <p><input type="text" id="username" placeholder="用户名"></p>
+            <p><input type="password" id="password" placeholder="密码"></p>
+            <p>
+                <button class="btn" onclick="alert('登录点击!')">登录</button>
+                <button class="btn btn-secondary" onclick="this.innerHTML='已注册'">注册</button>
+            </p>
+        </div>
+
+        <!-- 命令输入 -->
+        <div>
+            <h3>输入自然语言命令：</h3>
+            <p>
+                <input type="text" id="command" 
+                       placeholder="例如：在用户名框输入 test" 
+                       onkeypress="if(event.key==='Enter')runCommand()">
+                <button class="btn" onclick="runCommand()">执行</button>
+            </p>
+        </div>
+
+        <div id="result">等待命令...</div>
+
+        <!-- 使用 Demo 版本（免费测试） -->
+        <script src="https://cdn.jsdelivr.net/npm/page-agent@1.5.11/dist/iife/page-agent.demo.js"></script>
+        
+        <script>
+            // 检查 PageAgent 是否加载
+            if (typeof window.PageAgent !== 'undefined') {
+                document.getElementById('result').innerHTML = '✅ PageAgent 已加载！\n\n可以尝试：\n1. 在用户名框输入 "test"\n2. 点击登录按钮\n3. 在密码框输入 "123456"';
+                
+                // 创建 agent 实例（使用老大的DashScope API）
+                const agent = new PageAgent({
+                    model: 'qwen3-coder-plus',
+                    baseURL: 'https://coding.dashscope.aliyuncs.com/v1',
+                    apiKey: 'sk-sp-b3582ce1e295450db27de2e0fcd0d33c',
+                    language: 'zh-CN'
+                });
+                
+                window.agent = agent;
+                console.log('PageAgent 实例:', agent);
+            } else {
+                document.getElementById('result').innerHTML = '❌ PageAgent 未加载，请检查网络连接';
+            }
+
+            async function runCommand() {
+                const command = document.getElementById('command').value;
+                if (!command) return;
+                
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `⏳ 执行命令: ${command}...`;
+                
+                try {
+                    if (window.agent) {
+                        const result = await window.agent.execute(command);
+                        resultDiv.innerHTML = `✅ 执行成功！\n\n结果: ${JSON.stringify(result, null, 2)}`;
+                    } else {
+                        resultDiv.innerHTML = '❌ PageAgent 未初始化';
+                    }
+                } catch (error) {
+                    resultDiv.innerHTML = `❌ 错误: ${error.message}`;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

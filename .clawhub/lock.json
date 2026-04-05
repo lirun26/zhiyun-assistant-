@@ -1,0 +1,701 @@
+{
+  "version": 1,
+  "skills": {
+    "skill-finder-cn": {
+      "version": "1.0.0",
+      "installedAt": 1773469560741
+    },
+    "self-improving-agent": {
+      "version": "3.0.2",
+      "installedAt": 1773470234110
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1773470281875
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1773470403120
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1773470407647
+    },
+    "openclaw-backup": {
+      "version": "1.0.0",
+      "installedAt": 1773470463106
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1773470522259
+    },
+    "openclaw-tavily-search": {
+      "version": "0.1.0",
+      "installedAt": 1773470581419
+    },
+    "rss-ai-reader": {
+      "version": "1.0.0",
+      "installedAt": 1773471481073
+    },
+    "ai-news-collectors": {
+      "version": "1.0.0",
+      "installedAt": 1773471485746
+    },
+    "news-aggregator": {
+      "version": "1.0.3",
+      "installedAt": 1773471542828
+    },
+    "rss-aggregator": {
+      "version": "1.0.2",
+      "installedAt": 1773471723230
+    },
+    "daily-hot-push": {
+      "version": "1.0.0",
+      "installedAt": 1773471781947
+    },
+    "hot-news-aggregator": {
+      "version": "1.0.0",
+      "installedAt": 1773471841288
+    },
+    "ai-news-zh": {
+      "version": "1.0.0",
+      "installedAt": 1773471847243
+    },
+    "openclaw-shield": {
+      "version": "1.0.3",
+      "installedAt": 1773472730678
+    },
+    "openclaw-ops-guardrails": {
+      "version": "0.1.1",
+      "installedAt": 1773472738979
+    },
+    "openclaw-cli": {
+      "version": "1.0.0",
+      "installedAt": 1773472757813
+    },
+    "skill-guard": {
+      "version": "1.0.2",
+      "installedAt": 1773472774552
+    },
+    "skill-builder": {
+      "version": "1.0.5",
+      "installedAt": 1773472779556
+    },
+    "self-evolving-skill": {
+      "version": "1.0.2",
+      "installedAt": 1773472784581
+    },
+    "skill-scanner": {
+      "version": "0.1.2",
+      "installedAt": 1773472789650
+    },
+    "auto-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1773472797457
+    },
+    "auto-workflow": {
+      "version": "1.0.0",
+      "installedAt": 1773472809627
+    },
+    "browser-automation": {
+      "version": "1.0.1",
+      "installedAt": 1773472826413
+    },
+    "ai-web-automation": {
+      "version": "1.0.0",
+      "installedAt": 1773472846310
+    },
+    "multi-search-engine-2-0-1": {
+      "version": "1.0.0",
+      "installedAt": 1773472859487
+    },
+    "file-summary": {
+      "version": "1.0.0",
+      "installedAt": 1773472864502
+    },
+    "file-organizer-zh": {
+      "version": "1.0.0",
+      "installedAt": 1773472868957
+    },
+    "afrexai-productivity-system": {
+      "version": "1.0.0",
+      "installedAt": 1773472892012
+    },
+    "git-cli": {
+      "version": "1.0.0",
+      "installedAt": 1773472911009
+    },
+    "visual-file-sorter": {
+      "version": "0.1.0",
+      "installedAt": 1773472923505
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1773472927906
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1773472936332
+    },
+    "tavily-web-search-for-openclaw": {
+      "version": "1.0.0",
+      "installedAt": 1773493578817
+    },
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1773493608608
+    },
+    "sonos": {
+      "version": "1.0.0",
+      "installedAt": 1773493644684
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1773493664788
+    },
+    "nano-pdf": {
+      "version": "1.0.0",
+      "installedAt": 1773493681423
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1773493689600
+    },
+    "ai-humanizer": {
+      "version": "2.1.0",
+      "installedAt": 1773493710778
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1773493761356
+    },
+    "youtube-transcribe": {
+      "version": "1.0.0",
+      "installedAt": 1773493787802
+    },
+    "brave-search": {
+      "version": "1.0.1",
+      "installedAt": 1773493795452
+    },
+    "mcp-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773493821353
+    },
+    "crypto-trading-bot": {
+      "version": "1.0.0",
+      "installedAt": 1773494400721
+    },
+    "day-trading-skill": {
+      "version": "1.2.2",
+      "installedAt": 1773494412334
+    },
+    "akshare-stock": {
+      "version": "1.0.1",
+      "installedAt": 1773494451697
+    },
+    "portfolio-tracker": {
+      "version": "0.0.1",
+      "installedAt": 1773494459268
+    },
+    "business-plan": {
+      "version": "0.1.0",
+      "installedAt": 1773494471626
+    },
+    "ai-side-hustle-agent": {
+      "version": "1.0.0",
+      "installedAt": 1773494517008
+    },
+    "freelance": {
+      "version": "1.0.0",
+      "installedAt": 1773494523250
+    },
+    "xiaohongshu-deep-research": {
+      "version": "1.2.1",
+      "installedAt": 1773495288256
+    },
+    "xiaohongshu-mcp-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773495300504
+    },
+    "dingtalk-push": {
+      "version": "0.1.0",
+      "installedAt": 1773500114861
+    },
+    "dingtalk-setup": {
+      "version": "1.0.0",
+      "installedAt": 1773500199463
+    },
+    "xiaohongshu-ai-money-guide": {
+      "version": "0.1.0",
+      "installedAt": 1773504665150
+    },
+    "openclaw-money-playbook": {
+      "version": "1.0.0",
+      "installedAt": 1773504683401
+    },
+    "freelance-proposal-engine": {
+      "version": "1.0.0",
+      "installedAt": 1773504688449
+    },
+    "ai-video-script": {
+      "version": "1.0.0",
+      "installedAt": 1773504803938
+    },
+    "tiktok-viral-predictor": {
+      "version": "1.0.0",
+      "installedAt": 1773504808275
+    },
+    "amazon-niche-finder": {
+      "version": "1.1.0",
+      "installedAt": 1773504825026
+    },
+    "video-downloader-skill": {
+      "version": "1.0.1",
+      "installedAt": 1773504829369
+    },
+    "youtube-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1773568148663
+    },
+    "x-twitter": {
+      "version": "2.3.1",
+      "installedAt": 1773568150537
+    },
+    "social-media-scheduler": {
+      "version": "1.0.0",
+      "installedAt": 1773568153937
+    },
+    "trading": {
+      "version": "1.0.1",
+      "installedAt": 1773568157411
+    },
+    "social-media-agent": {
+      "version": "1.0.0",
+      "installedAt": 1773568159993
+    },
+    "content-writer": {
+      "version": "1.0.0",
+      "installedAt": 1773568161625
+    },
+    "marketing-strategy-pmm": {
+      "version": "2.1.1",
+      "installedAt": 1773568164038
+    },
+    "marketing-mode": {
+      "version": "1.0.0",
+      "installedAt": 1773568171034
+    },
+    "youtube-transcript": {
+      "version": "1.0.1",
+      "installedAt": 1773568172937
+    },
+    "novel-generator": {
+      "version": "1.0.0",
+      "installedAt": 1773569582496
+    },
+    "open-novel-writing": {
+      "version": "1.0.0",
+      "installedAt": 1773569587208
+    },
+    "novel-to-drama-script": {
+      "version": "1.0.0",
+      "installedAt": 1773569593318
+    },
+    "novel-workshop": {
+      "version": "2.0.0",
+      "installedAt": 1773569595445
+    },
+    "ai-novel-chongshengfuchou": {
+      "version": "1.0.2",
+      "installedAt": 1773569597418
+    },
+    "nini-writing-proofreading": {
+      "version": "0.1.2",
+      "installedAt": 1773572476936
+    },
+    "openmaic": {
+      "version": "0.2.1",
+      "installedAt": 1773839457833
+    },
+    "elite-longterm-memory": {
+      "version": "1.2.3",
+      "installedAt": 1774018008586
+    },
+    "neural-memory": {
+      "version": "4.12.0",
+      "installedAt": 1773839802852
+    },
+    "memory-setup-openclaw": {
+      "version": "1.0.0",
+      "installedAt": 1773839804993
+    },
+    "multi-agent-collaboration": {
+      "version": "1.0.0",
+      "installedAt": 1773839815555
+    },
+    "memory-hygiene": {
+      "version": "1.0.0",
+      "installedAt": 1773843558358
+    },
+    "memory-tiering": {
+      "version": "1.0.0",
+      "installedAt": 1773843560211
+    },
+    "triple-memory": {
+      "version": "1.0.0",
+      "installedAt": 1773843562609
+    },
+    "inkos": {
+      "version": "1.3.0",
+      "installedAt": 1773845338875
+    },
+    "agency-agents": {
+      "version": "1.0.2",
+      "installedAt": 1773855090103
+    },
+    "ai-image-gen": {
+      "version": "1.1.0",
+      "installedAt": 1773855612345
+    },
+    "clawteam-agent-swarm": {
+      "version": "1.0.0",
+      "installedAt": 1773857994103
+    },
+    "n8n-workflow-automation": {
+      "version": "1.0.0",
+      "installedAt": 1773897698659
+    },
+    "agentic-workflow-automation": {
+      "version": "0.1.0",
+      "installedAt": 1773897702243
+    },
+    "ai-productivity-audit": {
+      "version": "1.1.0",
+      "installedAt": 1773897706167
+    },
+    "tiktok-growth": {
+      "version": "1.0.0",
+      "installedAt": 1773897710655
+    },
+    "youtube-shorts-automation": {
+      "version": "1.0.0",
+      "installedAt": 1773897714986
+    },
+    "atlassian-mcp": {
+      "version": "1.0.0",
+      "installedAt": 1773961214343
+    },
+    "music-generation": {
+      "version": "1.0.0",
+      "installedAt": 1773961240133
+    },
+    "terminal-command-execution": {
+      "version": "1.0.0",
+      "installedAt": 1773961278811
+    },
+    "suno-automation": {
+      "version": "1.0.0",
+      "installedAt": 1773987530300
+    },
+    "claude-code": {
+      "version": "1.0.0",
+      "installedAt": 1773987535339
+    },
+    "video-frames": {
+      "version": "1.0.0",
+      "installedAt": 1773987557238
+    },
+    "workflow-builder": {
+      "version": "2.0.0",
+      "installedAt": 1773987617678
+    },
+    "mcp-hass": {
+      "version": "1.0.1",
+      "installedAt": 1773987632075
+    },
+    "deep-scraper": {
+      "version": "1.0.1",
+      "installedAt": 1774014289347
+    },
+    "devops": {
+      "version": "1.0.0",
+      "installedAt": 1774014294271
+    },
+    "sora-video-gen": {
+      "version": "1.0.0",
+      "installedAt": 1774014299953
+    },
+    "kokoro-tts": {
+      "version": "0.1.0",
+      "installedAt": 1774099065292
+    },
+    "voice-transcribe": {
+      "version": "1.0.1",
+      "installedAt": 1774099074157
+    },
+    "openai-tts": {
+      "version": "1.0.0",
+      "installedAt": 1774099076254
+    },
+    "tg-voice-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1774099080665
+    },
+    "ocr-local": {
+      "version": "1.0.0",
+      "installedAt": 1774099083026
+    },
+    "screenshot-ocr": {
+      "version": "1.0.0",
+      "installedAt": 1774099085554
+    },
+    "ai-voice-cloning": {
+      "version": "0.1.5",
+      "installedAt": 1774099102285
+    },
+    "wechat-mp-cn": {
+      "version": "1.0.0",
+      "installedAt": 1774099107697
+    },
+    "wechat-daily-report": {
+      "version": "1.0.0",
+      "installedAt": 1774099112152
+    },
+    "telegram-bot-builder": {
+      "version": "1.0.0",
+      "installedAt": 1774099114497
+    },
+    "agent-telegram": {
+      "version": "1.0.0",
+      "installedAt": 1774099117079
+    },
+    "wechat-auto-reply": {
+      "version": "1.0.1",
+      "installedAt": 1774099140985
+    },
+    "memory-graph": {
+      "version": "1.0.0",
+      "installedAt": 1774099145046
+    },
+    "money-maker-hand": {
+      "version": "1.0.0",
+      "installedAt": 1774447264656
+    },
+    "crypto-trading-bot-playbook": {
+      "version": "1.0.0",
+      "installedAt": 1774447284621
+    },
+    "crypto-trading-bot-automaton": {
+      "version": "1.0.1",
+      "installedAt": 1774447290413
+    },
+    "binance-spot-trader": {
+      "version": "1.0.0",
+      "installedAt": 1774447303309
+    },
+    "productivity-automation-kit": {
+      "version": "1.0.0",
+      "installedAt": 1774447309940
+    },
+    "browser": {
+      "version": "1.0.0",
+      "installedAt": 1774504185665
+    },
+    "agent-self-repair": {
+      "version": "1.0.0",
+      "installedAt": 1774962949749
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1774610024191
+    },
+    "humanizer": {
+      "version": "1.0.0",
+      "installedAt": 1774614347815
+    },
+    "multi-search-engine": {
+      "version": "2.0.1",
+      "installedAt": 1774615976817
+    },
+    "context-optimizer": {
+      "version": "1.0.0",
+      "installedAt": 1774616213863
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1774677935890
+    },
+    "memory-never-forget": {
+      "version": "2.0.0",
+      "installedAt": 1774677962995
+    },
+    "adaptive-reasoning": {
+      "version": "1.0.0",
+      "installedAt": 1774677965318
+    },
+    "planning-with-files": {
+      "version": "2.26.1",
+      "installedAt": 1774682013668
+    },
+    "focus-deep-work": {
+      "version": "1.0.0",
+      "installedAt": 1774682015805
+    },
+    "market-research": {
+      "version": "1.0.1",
+      "installedAt": 1774682017798
+    },
+    "in-depth-research": {
+      "version": "1.0.0",
+      "installedAt": 1774682020065
+    },
+    "research-engine": {
+      "version": "1.0.0",
+      "installedAt": 1774682031794
+    },
+    "focus-tracker": {
+      "version": "1.0.0",
+      "installedAt": 1774682038673
+    },
+    "automation-workflows-0-1-0": {
+      "version": "1.0.0",
+      "installedAt": 1774683021824
+    },
+    "market-analysis-cn": {
+      "version": "1.0.0",
+      "installedAt": 1774683029757
+    },
+    "creative-thought-partner": {
+      "version": "1.0.1",
+      "installedAt": 1774683032032
+    },
+    "document-summary": {
+      "version": "1.1.1",
+      "installedAt": 1774683034450
+    },
+    "ai-conversation-summary": {
+      "version": "1.0.0",
+      "installedAt": 1774683036659
+    },
+    "business-writing": {
+      "version": "0.1.0",
+      "installedAt": 1774683038669
+    },
+    "task-planner": {
+      "version": "3.0.5",
+      "installedAt": 1774683040480
+    },
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1774686204407
+    },
+    "web-scraping": {
+      "version": "1.0.0",
+      "installedAt": 1774686211429
+    },
+    "local-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1774686213191
+    },
+    "self-reflection": {
+      "version": "1.1.1",
+      "installedAt": 1774686215311
+    },
+    "multi-agent-cn": {
+      "version": "1.2.0",
+      "installedAt": 1774686222283
+    },
+    "mlx-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1774686229299
+    },
+    "multi-agent-coordinator": {
+      "version": "1.0.0",
+      "installedAt": 1774686231380
+    },
+    "proactive-agent-lite": {
+      "version": "1.0.0",
+      "installedAt": 1774686930329
+    },
+    "secure-code-guardian": {
+      "version": "0.1.0",
+      "installedAt": 1774686949687
+    },
+    "story-cog": {
+      "version": "1.0.2",
+      "installedAt": 1774687255620
+    },
+    "deep-dialogue": {
+      "version": "1.0.0",
+      "installedAt": 1774687264612
+    },
+    "nini-writing-inspiration": {
+      "version": "0.1.2",
+      "installedAt": 1774687267035
+    },
+    "self-evolve": {
+      "version": "1.0.0",
+      "installedAt": 1774965864584
+    },
+    "ai-evolution-engine-v2": {
+      "version": "1.0.0",
+      "installedAt": 1774965873456
+    },
+    "self-evolve-agent": {
+      "version": "3.0.0",
+      "installedAt": 1774965878145
+    },
+    "inner-life-evolve": {
+      "version": "1.0.4",
+      "installedAt": 1774965882470
+    },
+    "auto-skill-evolver": {
+      "version": "1.5.1",
+      "installedAt": 1774965887511
+    },
+    "evolver": {
+      "version": "1.40.2",
+      "installedAt": 1775016438340
+    },
+    "capability-evolver": {
+      "version": "1.40.2",
+      "installedAt": 1774969287068
+    },
+    "recursive-self-improvement": {
+      "version": "1.0.0",
+      "installedAt": 1774969299799
+    },
+    "memory-self-heal": {
+      "version": "1.1.0",
+      "installedAt": 1774969312504
+    },
+    "tianyi-self-upgrade": {
+      "version": "1.0.0",
+      "installedAt": 1774969324762
+    },
+    "self-health-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1774969336202
+    },
+    "autonomous-tasks": {
+      "version": "10.3.1",
+      "installedAt": 1774969347533
+    },
+    "openclaw-iflow-doctor": {
+      "version": "1.1.0",
+      "installedAt": 1774969361888
+    },
+    "feishu-evolver-wrapper": {
+      "version": "1.7.1",
+      "installedAt": 1775016441640
+    },
+    "capability-evolver-pro": {
+      "version": "1.0.2",
+      "installedAt": 1775017345054
+    },
+    "actual-self-improvement": {
+      "version": "1.0.0",
+      "installedAt": 1775017375385
+    }
+  }
+}

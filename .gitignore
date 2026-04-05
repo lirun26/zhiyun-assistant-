@@ -1,0 +1,9 @@
+.env
+node_modules/
+.DS_StoreMEMORY.md
+config/*.json
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key

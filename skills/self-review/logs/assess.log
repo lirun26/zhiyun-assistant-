@@ -1,0 +1,19 @@
+🧬 AI Evolution Engine - 自我评估
+
+📊 能力清单:
+  工具: exec, read, write, web_fetch, browser
+  技能: 已安装 192 个skills
+  知识: MEMORY.md, knowledge/, .learnings/
+
+📈 性能指标:
+  成功率: 待测量
+  响应时间: 待测量
+  成本效率: 待测量
+
+🔍 知识缺口:
+  - 需要更多赚钱渠道知识
+  - 需要优化token使用效率
+  - 需要学习最新AI技术
+
+✅ 评估完成
+💡 建议: 运行 learn.mjs 开始学习

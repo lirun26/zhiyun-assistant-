@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>麻将连连看2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        :root {
+            --primary: #2E7D32;
+            --secondary: #FF6F00;
+            --bg: #1B5E20;
+            --tile-bg: #FFF8E1;
+            --tile-border: #8D6E63;
+            --selected: #FFEB3B;
+            --success: #4CAF50;
+            --error: #F44336;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: white;
+            min-height: 100vh;
+            overflow: hidden;
+            user-select: none;
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* 首页 */
+        .home {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+        
+        .slogan {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            width: 200px;
+            padding: 15px;
+            margin: 8px 0;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: bold;
+        }
+        
+        .btn:active {
+            transform: scale(0.95);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), #FFA000);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 111, 0, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        
+        /* 游戏页面 */
+        .game {
+            display: none;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .game-header {
+            background: rgba(0,0,0,0.3);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .level-info {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .game-stats {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 16px;
+        }
+        
+        .timer {
+            color: var(--secondary);
+        }
+        
+        .timer.warning {
+            color: var(--error);
+            animation: blink 0.5s infinite;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0.5; }
+        }
+        
+        .game-board {
+            flex: 1;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 6px;
+            align-content: center;
+            overflow: auto;
+        }
+        
+        .tile {
+            aspect-ratio: 0.75;
+            background: var(--tile-bg);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.15s;
+            box-shadow: 0 3px 0 var(--tile-border), 0 4px 6px rgba(0,0,0,0.3);
+            position: relative;
+            color: #333;
+        }
+        
+        .tile:active {
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 var(--tile-border), 0 2px 3px rgba(0,0,0,0.3);
+        }
+        
+        .tile.selected {
+            background: var(--selected);
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 var(--tile-border), 0 0 15px var(--selected);
+        }
+        
+        .tile.matched {
+            animation: match 0.3s ease forwards;
+        }
+        
+        @keyframes match {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(0); opacity: 0; }
+        }
+        
+        .tile.hidden {
+            visibility: hidden;
+            pointer-events: none;
+        }
+        
+        /* 道具栏 */
+        .toolbar {
+            background: rgba(0,0,0,0.4);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .tool-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: white;
+        }
+        
+        .tool-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .tool-btn.disabled {
+            opacity: 0.5;
+        }
+        
+        .tool-icon {
+            font-size: 24px;
+        }
+        
+        .tool-count {
+            font-size: 12px;
+            margin-top: 2px;
+        }
+        
+        /* 结果弹窗 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+        
+        .modal.show {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #FFF8E1, #FFF);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            color: #333;
+            max-width: 320px;
+            animation: popIn 0.3s ease;
+        }
+        
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .result-icon {
+            font-size: 80px;
+            margin-bottom: 15px;
+        }
+        
+        .result-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .result-title.success { color: var(--success); }
+        .result-title.fail { color: var(--error); }
+        
+        .result-msg {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .result-reward {
+            background: #FFF3E0;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .result-reward span {
+            font-size: 28px;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        /* 道具按钮状态 */
+        .tool-btn.active {
+            background: var(--selected);
+            border-color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 首页 -->
+        <div class="home" id="home">
+            <div class="logo">🀄</div>
+            <h1 class="title">麻将连连看2</h1>
+            <p class="slogan">经典连连看，休闲又益智</p>
+            
+            <button class="btn btn-primary" onclick="startGame()">开始游戏</button>
+            <button class="btn btn-secondary" onclick="showDaily()">每日挑战</button>
+            <button class="btn btn-secondary" onclick="showShop()">道具商店</button>
+            
+            <div style="margin-top: 30px; opacity: 0.8;">
+                <div>💰 金币: <span id="homeCoins">0</span></div>
+            </div>
+        </div>
+        
+        <!-- 游戏页面 -->
+        <div class="game" id="game">
+            <div class="game-header">
+                <div class="level-info">第 <span id="levelNum">1</span> 关</div>
+                <div class="game-stats">
+                    <div class="stat">⏱️ <span id="timer" class="timer">60</span>s</div>
+                    <div class="stat">💰 <span id="coins">0</span></div>
+                    <div class="stat">🃏 <span id="pairs">0</span>对</div>
+                </div>
+            </div>
+            
+            <div class="game-board" id="board"></div>
+            
+            <div class="toolbar">
+                <div class="tool-btn" onclick="useTool('hint')" id="toolHint">
+                    <span class="tool-icon">🔍</span>
+                    <span class="tool-count" id="hintCount">×0</span>
+                </div>
+                <div class="tool-btn" onclick="useTool('bomb')" id="toolBomb">
+                    <span class="tool-icon">💣</span>
+                    <span class="tool-count" id="bombCount">×0</span>
+                </div>
+                <div class="tool-btn" onclick="useTool('reshuffle')" id="toolReshuffle">
+                    <span class="tool-icon">🔄</span>
+                    <span class="tool-count" id="reshuffleCount">×0</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 结果弹窗 -->
+        <div class="modal" id="resultModal">
+            <div class="modal-content">
+                <div class="result-icon" id="resultIcon">🏆</div>
+                <div class="result-title" id="resultTitle">恭喜过关!</div>
+                <div class="result-msg" id="resultMsg">太厉害了!</div>
+                <div class="result-reward" id="resultReward">
+                    +<span id="rewardValue">50</span> 💰
+                </div>
+                <button class="btn btn-primary" onclick="nextLevel()" id="nextBtn">下一关</button>
+                <button class="btn btn-secondary" onclick="backHome()" style="margin-top: 10px;">返回首页</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 麻将牌数据
+        const tiles = [
+            // 万子
+            '🀇','🀈','🀉','🀊','🀋','🀌','🀍','🀎','🀏',
+            // 筒子
+            '🀙','🀚','🀛','🀜','🀝','🀞','🀟','🀠','🀡',
+            // 条子
+            '🀐','🀑','🀒','🀓','🀔','🀕','🀖','🀗','🀘',
+            // 东南西北中发白
+            '🀀','🀁','🀂','🀃','🀄','🀅','🀆',
+            // 春夏秋冬梅兰竹菊
+            '🀓','🀔','🀕','🀖','🀗','🀘','🀙','🀚'
+        ];
+        
+        // 游戏状态
+        let state = {
+            level: 1,
+            coins: 100,
+            items: { hint: 3, bomb: 2, reshuffle: 2 },
+            board: [],
+            selected: null,
+            pairsLeft: 0,
+            timeLeft: 60,
+            timerInterval: null,
+            isPlaying: false,
+            activeTool: null
+        };
+        
+        // 关卡配置
+        const levelConfig = {
+            1: { pairs: 18, time: 0 },
+            2: { pairs: 20, time: 0 },
+            3: { pairs: 22, time: 0 },
+            4: { pairs: 24, time: 0 },
+            5: { pairs: 26, time: 0 },
+            6: { pairs: 28, time: 90 },
+            7: { pairs: 30, time: 90 },
+            8: { pairs: 32, time: 90 },
+            9: { pairs: 34, time: 60 },
+            10: { pairs: 36, time: 60 },
+            11: { pairs: 40, time: 45 },
+            12: { pairs: 44, time: 45 },
+            13: { pairs: 48, time: 30 },
+            14: { pairs: 52, time: 30 },
+            15: { pairs: 60, time: 30 },
+        };
+        
+        // 初始化
+        function init() {
+            loadState();
+            updateUI();
+        }
+        
+        // 保存/加载状态
+        function saveState() {
+            localStorage.setItem('mahjongGame', JSON.stringify(state));
+        }
+        
+        function loadState() {
+            const saved = localStorage.getItem('mahjongGame');
+            if (saved) {
+                state = { ...state, ...JSON.parse(saved) };
+            }
+        }
+        
+        // 更新UI
+        function updateUI() {
+            document.getElementById('homeCoins').textContent = state.coins;
+            document.getElementById('coins').textContent = state.coins;
+            document.getElementById('hintCount').textContent = `×${state.items.hint}`;
+            document.getElementById('bombCount').textContent = `×${state.items.bomb}`;
+            document.getElementById('reshuffleCount').textContent = `×${state.items.reshuffle}`;
+            
+            // 更新道具按钮状态
+            document.getElementById('toolHint').classList.toggle('disabled', state.items.hint <= 0);
+            document.getElementById('toolBomb').classList.toggle('disabled', state.items.bomb <= 0);
+            document.getElementById('toolReshuffle').classList.toggle('disabled', state.items.reshuffle <= 0);
+        }
+        
+        // 开始游戏
+        function startGame() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('game').style.display = 'flex';
+            
+            initLevel();
+        }
+        
+        // 初始化关卡
+        function initLevel() {
+            const config = levelConfig[state.level] || { pairs: 36, time: 30 };
+            const numPairs = config.pairs;
+            state.pairsLeft = numPairs;
+            state.selected = null;
+            state.activeTool = null;
+            
+            // 更新UI
+            document.getElementById('levelNum').textContent = state.level;
+            document.getElementById('pairs').textContent = numPairs;
+            
+            // 生成牌堆
+            generateBoard(numPairs);
+            
+            // 计时器
+            if (config.time > 0) {
+                state.timeLeft = config.time;
+                document.getElementById('timer').textContent = state.timeLeft;
+                document.getElementById('timer').style.display = 'block';
+                
+                if (state.timerInterval) clearInterval(state.timerInterval);
+                state.timerInterval = setInterval(() => {
+                    if (!state.isPlaying) return;
+                    state.timeLeft--;
+                    const timerEl = document.getElementById('timer');
+                    timerEl.textContent = state.timeLeft;
+                    timerEl.classList.toggle('warning', state.timeLeft <= 10);
+                    
+                    if (state.timeLeft <= 0) {
+                        gameOver();
+                    }
+                }, 1000);
+            } else {
+                document.getElementById('timer').style.display = 'none';
+            }
+            
+            state.isPlaying = true;
+        }
+        
+        // 生成牌面
+        function generateBoard(numPairs) {
+            // 选择麻将牌
+            const selectedTiles = [];
+            const tileCount = Math.min(34, tiles.length);
+            
+            for (let i = 0; i < numPairs; i++) {
+                const tile = tiles[i % tileCount];
+                selectedTiles.push(tile, tile);
+            }
+            
+            // 洗牌
+            for (let i = selectedTiles.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [selectedTiles[i], selectedTiles[j]] = [selectedTiles[j], selectedTiles[i]];
+            }
+            
+            state.board = selectedTiles;
+            renderBoard();
+        }
+        
+        // 渲染牌面
+        function renderBoard() {
+            const board = document.getElementById('board');
+            board.innerHTML = '';
+            
+            state.board.forEach((tile, idx) => {
+                const div = document.createElement('div');
+                div.className = 'tile';
+                div.textContent = tile;
+                div.dataset.idx = idx;
+                
+                if (tile === null) {
+                    div.classList.add('hidden');
+                }
+                
+                div.onclick = () => handleTileClick(idx);
+                board.appendChild(div);
+            });
+        }
+        
+        // 点击处理
+        function handleTileClick(idx) {
+            if (!state.isPlaying || state.board[idx] === null) return;
+            
+            // 道具模式
+            if (state.activeTool === 'hint') {
+                showHint();
+                return;
+            } else if (state.activeTool === 'bomb') {
+                useBomb(idx);
+                return;
+            }
+            
+            const tiles = document.querySelectorAll('.tile');
+            
+            // 取消选中
+            if (state.selected === idx) {
+                tiles[idx].classList.remove('selected');
+                state.selected = null;
+                return;
+            }
+            
+            // 第一次选中
+            if (state.selected === null) {
+                state.selected = idx;
+                tiles[idx].classList.add('selected');
+                return;
+            }
+            
+            // 第二次选中 - 配对检查
+            const tile1 = state.board[state.selected];
+            const tile2 = state.board[idx];
+            
+            if (tile1 === tile2 && state.selected !== idx) {
+                // 配对成功
+                tiles[state.selected].classList.remove('selected');
+                tiles[state.selected].classList.add('matched');
+                tiles[idx].classList.add('matched');
+                
+                setTimeout(() => {
+                    state.board[state.selected] = null;
+                    state.board[idx] = null;
+                    tiles[state.selected].classList.add('hidden');
+                    tiles[idx].classList.add('hidden');
+                    state.selected = null;
+                    state.pairsLeft--;
+                    document.getElementById('pairs').textContent = state.pairsLeft;
+                    
+                    // 检查胜利
+                    if (state.pairsLeft <= 0) {
+                        gameWin();
+                    }
+                }, 300);
+            } else {
+                // 配对失败
+                tiles[state.selected].classList.remove('selected');
+                tiles[state.selected].classList.add('shake');
+                tiles[idx].classList.add('shake');
+                
+                setTimeout(() => {
+                    tiles[state.selected].classList.remove('shake');
+                    tiles[idx].classList.remove('shake');
+                    state.selected = null;
+                }, 300);
+            }
+        }
+        
+        // 使用道具
+        function useTool(tool) {
+            if (state.items[tool] <= 0) {
+                showToast('道具不足!');
+                return;
+            }
+            
+            // 切换道具状态
+            if (state.activeTool === tool) {
+                state.activeTool = null;
+                document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+            } else {
+                state.activeTool = tool;
+                document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+                document.getElementById('tool' + tool.charAt(0).toUpperCase() + tool.slice(1)).classList.add('active');
+            }
+        }
+        
+        // 提示
+        function showHint() {
+            const visible = state.board.map((t, i) => t !== null ? { tile: t, idx: i } : null).filter(t => t);
+            
+            // 找一对
+            for (let i = 0; i < visible.length; i++) {
+                for (let j = i + 1; j < visible.length; j++) {
+                    if (visible[i].tile === visible[j].tile) {
+                        // 高亮显示
+                        const tiles = document.querySelectorAll('.tile');
+                        tiles[visible[i].idx].style.background = '#FFEB3B';
+                        tiles[visible[j].idx].style.background = '#FFEB3B';
+                        
+                        setTimeout(() => {
+                            tiles[visible[i].idx].style.background = '';
+                            tiles[visible[j].idx].style.background = '';
+                        }, 1500);
+                        
+                        // 消耗道具
+                        state.items.hint--;
+                        state.activeTool = null;
+                        document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+                        updateUI();
+                        saveState();
+                        return;
+                    }
+                }
+            }
+        }
+        
+        // 炸弹
+        function useBomb(idx) {
+            if (state.board[idx] === null) return;
+            
+            // 消除3张同类型
+            const targetTile = state.board[idx];
+            const toRemove = [idx];
+            
+            for (let i = 0; i < state.board.length; i++) {
+                if (i !== idx && state.board[i] === targetTile && toRemove.length < 3) {
+                    toRemove.push(i);
+                }
+            }
+            
+            if (toRemove.length >= 2) {
+                const tiles = document.querySelectorAll('.tile');
+                toRemove.forEach(i => {
+                    tiles[i].classList.add('matched');
+                    state.board[i] = null;
+                });
+                
+                setTimeout(() => {
+                    toRemove.forEach(i => tiles[i].classList.add('hidden'));
+                    state.pairsLeft -= toRemove.length / 2;
+                    document.getElementById('pairs').textContent = state.pairsLeft;
+                    
+                    if (state.pairsLeft <= 0) {
+                        gameWin();
+                    }
+                }, 300);
+                
+                // 消耗道具
+                state.items.bomb--;
+                state.activeTool = null;
+                document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+                updateUI();
+                saveState();
+            }
+        }
+        
+        // 重置
+        function reshuffle() {
+            if (state.items.reshuffle <= 0) return;
+            
+            // 获取当前可见的牌
+            const visible = state.board.filter(t => t !== null);
+            
+            // 洗牌
+            for (let i = visible.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [visible[i], visible[j]] = [visible[j], visible[i]];
+            }
+            
+            // 重新放置
+            let idx = 0;
+            state.board = state.board.map(t => t !== null ? visible[idx++] : null);
+            
+            renderBoard();
+            
+            // 消耗道具
+            state.items.reshuffle--;
+            state.activeTool = null;
+            document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+            updateUI();
+            saveState();
+        }
+        
+        // 游戏胜利
+        function gameWin() {
+            state.isPlaying = false;
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            
+            const reward = 30 + state.level * 10;
+            state.coins += reward;
+            saveState();
+            
+            showResult(true, reward);
+        }
+        
+        // 游戏失败
+        function gameOver() {
+            state.isPlaying = false;
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            
+            showResult(false, 0);
+        }
+        
+        // 显示结果
+        function showResult(success, reward) {
+            const modal = document.getElementById('resultModal');
+            const icon = document.getElementById('resultIcon');
+            const title = document.getElementById('resultTitle');
+            const msg = document.getElementById('resultMsg');
+            const rewardDiv = document.getElementById('resultReward');
+            
+            if (success) {
+                icon.textContent = '🏆';
+                title.textContent = '恭喜过关!';
+                title.className = 'result-title success';
+                msg.textContent = `第 ${state.level} 关完成!`;
+                rewardDiv.style.display = 'block';
+                document.getElementById('rewardValue').textContent = reward;
+                document.getElementById('nextBtn').textContent = '下一关';
+            } else {
+                icon.textContent = '😢';
+                title.textContent = '时间到!';
+                title.className = 'result-title fail';
+                msg.textContent = '再接再厉!';
+                rewardDiv.style.display = 'none';
+                document.getElementById('nextBtn').textContent = '重新挑战';
+            }
+            
+            modal.classList.add('show');
+        }
+        
+        // 下一关
+        function nextLevel() {
+            document.getElementById('resultModal').classList.remove('show');
+            
+            if (state.pairsLeft <= 0 || document.getElementById('nextBtn').textContent === '下一关') {
+                state.level++;
+            }
+            
+            saveState();
+            updateUI();
+            initLevel();
+        }
+        
+        // 返回首页
+        function backHome() {
+            document.getElementById('resultModal').classList.remove('show');
+            document.getElementById('game').style.display = 'none';
+            document.getElementById('home').style.display = 'flex';
+            
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            state.isPlaying = false;
+        }
+        
+        // 商店
+        function showShop() {
+            const items = [
+                { name: '提示', price: 50, icon: '🔍' },
+                { name: '炸弹', price: 80, icon: '💣' },
+                { name: '重置', price: 100, icon: '🔄' }
+            ];
+            
+            let msg = '🏪 道具商店\n\n';
+            items.forEach((item, i) => {
+                msg += `${item.icon} ${item.name}: ${item.price}💰\n`;
+            });
+            msg += '\n回复【购买+序号】购买';
+            
+            alert('商店功能开发中，敬请期待!');
+        }
+        
+        // 每日挑战
+        function showDaily() {
+            alert('每日挑战即将上线!');
+        }
+        
+        // 提示消息
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0,0,0,0.8);
+                color: white;
+                padding: 20px 40px;
+                border-radius: 10px;
+                font-size: 18px;
+                z-index: 200;
+                animation: fadeIn 0.3s;
+            `;
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => toast.remove(), 1500);
+        }
+        
+        // 页面卸载时保存
+        window.onbeforeunload = () => {
+            saveState();
+        };
+        
+        // 初始化
+        init();
+    </script>
+</body>
+</html>

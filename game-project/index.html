@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>成语闯关王2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #FF6B35;
+            --secondary: #4ECDC4;
+            --bg: #FFF8E7;
+            --text: #2D3436;
+            --success: #00B894;
+            --error: #E74C3C;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* 首页 */
+        .home {
+            text-align: center;
+            padding-top: 40px;
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .slogan {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 16px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #ff8f5a);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .energy-bar {
+            background: white;
+            border-radius: 20px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .energy-icon {
+            font-size: 24px;
+        }
+        
+        .energy-info {
+            flex: 1;
+            margin-left: 10px;
+        }
+        
+        .energy-label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .energy-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .energy-recover {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        /* 游戏页面 */
+        .game {
+            display: none;
+        }
+        
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .level-badge {
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .coin-display {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .coin-icon {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        
+        .question-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .question-type {
+            font-size: 14px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .question-text {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .answer-input {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .answer-char {
+            width: 50px;
+            height: 60px;
+            border: 2px solid var(--secondary);
+            border-radius: 10px;
+            font-size: 32px;
+            text-align: center;
+            background: #f8fffc;
+        }
+        
+        .options {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .option-btn {
+            padding: 15px;
+            background: #f5f5f5;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .option-btn:hover {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .option-btn.selected {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+        
+        .hint-btn {
+            background: #f0f0f0;
+            color: #666;
+            border: none;
+        }
+        
+        .game-footer {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .game-footer .btn {
+            margin-bottom: 0;
+        }
+        
+        /* 结果弹窗 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+        
+        .modal.show {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 320px;
+            animation: popIn 0.3s ease;
+        }
+        
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .result-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .result-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .result-title.success {
+            color: var(--success);
+        }
+        
+        .result-title.error {
+            color: var(--error);
+        }
+        
+        .result-msg {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .result-reward {
+            background: #fff8e7;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .result-reward span {
+            font-size: 24px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* 动画 */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        
+        .shake {
+            animation: shake 0.3s;
+        }
+        
+        @keyframes coinFly {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(0) translateY(-50px); opacity: 0; }
+        }
+        
+        .coin-anim {
+            animation: coinFly 0.5s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 首页 -->
+        <div class="home" id="home">
+            <div class="logo">🏆</div>
+            <h1 class="title">成语闯关王2</h1>
+            <p class="slogan">闯关学成语，赚钱涨知识</p>
+            
+            <div class="energy-bar">
+                <span class="energy-icon">⚡</span>
+                <div class="energy-info">
+                    <div class="energy-label">体力值</div>
+                    <div class="energy-value" id="energyValue">10/20</div>
+                </div>
+                <div class="energy-recover" id="energyRecover">5分钟恢复1点</div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="startGame()">开始闯关</button>
+            <button class="btn btn-secondary" onclick="showDaily()">每日挑战</button>
+            <button class="btn btn-secondary" onclick="showCollection()">我的收藏</button>
+        </div>
+        
+        <!-- 游戏页面 -->
+        <div class="game" id="game">
+            <div class="game-header">
+                <div class="level-badge">第 <span id="levelNum">1</span> 关</div>
+                <div class="coin-display">
+                    <span class="coin-icon">💰</span>
+                    <span id="coinValue">0</span>
+                </div>
+            </div>
+            
+            <div class="question-card" id="questionCard">
+                <div class="question-type" id="questionType">成语填空</div>
+                <div class="question-text" id="questionText">一___千金</div>
+                
+                <!-- 填空模式 -->
+                <div class="answer-input" id="answerInput"></div>
+                
+                <!-- 选择模式 -->
+                <div class="options" id="options"></div>
+                
+                <!-- 提示 -->
+                <div class="hint-text" id="hintText" style="display:none; color: #999; margin-top: 10px;">
+                    提示: <span id="hintContent"></span>
+                </div>
+            </div>
+            
+            <div class="game-footer">
+                <button class="btn btn-secondary hint-btn" onclick="useHint()">💡 提示 (-10💰)</button>
+                <button class="btn btn-primary" onclick="submitAnswer()">确定</button>
+            </div>
+        </div>
+        
+        <!-- 结果弹窗 -->
+        <div class="modal" id="resultModal">
+            <div class="modal-content">
+                <div class="result-icon" id="resultIcon">✅</div>
+                <div class="result-title" id="resultTitle">回答正确!</div>
+                <div class="result-msg" id="resultMsg">恭喜获得奖励!</div>
+                <div class="result-reward" id="resultReward" style="display:none">
+                    +<span id="rewardValue">10</span> 💰
+                </div>
+                <button class="btn btn-primary" onclick="nextLevel()">下一关</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 题库数据
+        const questions = [
+            { id: 1, type: "fill", q: "一___千金", a: "掷", hint: "比喻财务丰厚", diff: 1 },
+            { id: 2, type: "fill", q: "___鸣惊人", a: "一", hint: "原本指商鞅", diff: 1 },
+            { id: 3, type: "fill", q: "四面___", a: "楚歌", hint: "项羽被困", diff: 1 },
+            { id: 4, type: "fill", q: "___之即来", a: "呼", hint: "召唤", diff: 1 },
+            { id: 5, type: "fill", q: "___忙脚乱", a: "手", hint: "形容做事慌张", diff: 1 },
+            { id: 6, type: "fill", q: "三心___", a: "二意", hint: "不专心", diff: 1 },
+            { id: 7, type: "fill", q: "___有成竹", a: "胸", hint: "比喻做事有把握", diff: 1 },
+            { id: 8, type: "fill", q: "___蛇添足", a: "多", hint: "多此一举", diff: 1 },
+            { id: 9, type: "fill", q: "___马当先", a: "一", hint: "带头行动", diff: 1 },
+            { id: 10, type: "fill", q: "___高水长", a: "山", hint: "情谊深厚", diff: 1 },
+            { id: 11, type: "guess", q: "🐔🐔🐔🐔", a: "闻鸡起舞", hint: "听到鸡叫就起床练武", diff: 2 },
+            { id: 12, type: "guess", q: "🔥🚒💧", a: "水深火热", hint: "比喻处境艰难", diff: 2 },
+            { id: 13, type: "guess", q: "👀👄", a: "有目共睹", hint: "大家都看到了", diff: 1 },
+            { id: 14, type: "guess", q: "1️⃣2️⃣3️⃣4️⃣5️⃣", a: "颠三倒四", hint: "混乱没有条理", diff: 2 },
+            { id: 15, type: "guess", q: "⬆️⬇️⬅️➡️", a: "四面八方", hint: "各个方向", diff: 1 },
+            { id: 16, type: "idiom", q: "以", a: "以身作则", hint: "以自己的行为做榜样", diff: 1 },
+            { id: 17, type: "idiom", q: "人", a: "人山人海", hint: "人非常多", diff: 1 },
+            { id: 18, type: "idiom", q: "天", a: "天高云淡", hint: "秋天的天气", diff: 1 },
+            { id: 19, type: "idiom", q: "心", a: "心花怒放", hint: "非常高兴", diff: 1 },
+            { id: 20, type: "idiom", q: "目", a: "目不转睛", hint: "专注地看", diff: 1 },
+            { id: 21, type: "fill", q: "___身碎骨", a: "粉", hint: "不惜牺牲", diff: 1 },
+            { id: 22, type: "fill", q: "___钉截铁", a: "斩", hint: "果断坚决", diff: 2 },
+            { id: 23, type: "fill", q: "___马观花", a: "走", hint: "不仔细看", diff: 1 },
+            { id: 24, type: "fill", q: "___虎藏龙", a: "卧", hint: "有才能的人", diff: 1 },
+            { id: 25, type: "fill", q: "___兔赛跑", a: "龟", hint: "寓言故事", diff: 1 },
+            { id: 26, type: "fill", q: "___弓蛇影", a: "杯", hint: "自己吓自己", diff: 1 },
+            { id: 27, type: "fill", q: "___羊补牢", a: "亡", hint: "及时补救", diff: 1 },
+            { id: 28, type: "fill", q: "___歌燕舞", a: "莺", hint: "春景美好", diff: 2 },
+            { id: 29, type: "fill", q: "___飞凤舞", a: "龙", hint: "气势磅礴", diff: 1 },
+            { id: 30, type: "fill", q: "___争虎斗", a: "龙", hint: "激烈争夺", diff: 1 },
+        ];
+        
+        // 游戏状态
+        let state = {
+            level: 1,
+            energy: 10,
+            coins: 0,
+            currentQ: null,
+            userAnswer: '',
+            hintUsed: false
+        };
+        
+        // 初始化
+        function init() {
+            loadState();
+            updateUI();
+        }
+        
+        // 保存状态
+        function saveState() {
+            localStorage.setItem('idiomGame', JSON.stringify(state));
+        }
+        
+        // 加载状态
+        function loadState() {
+            const saved = localStorage.getItem('idiomGame');
+            if (saved) {
+                state = { ...state, ...JSON.parse(saved) };
+            }
+        }
+        
+        // 更新UI
+        function updateUI() {
+            document.getElementById('energyValue').textContent = `${state.energy}/20`;
+            document.getElementById('coinValue').textContent = state.coins;
+        }
+        
+        // 开始游戏
+        function startGame() {
+            if (state.energy < 1) {
+                alert('体力不足! 看广告恢复体力');
+                return;
+            }
+            
+            state.energy--;
+            state.hintUsed = false;
+            saveState();
+            updateUI();
+            
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('game').style.display = 'block';
+            
+            loadQuestion();
+        }
+        
+        // 加载题目
+        function loadQuestion() {
+            const idx = (state.level - 1) % questions.length;
+            state.currentQ = questions[idx];
+            
+            document.getElementById('levelNum').textContent = state.level;
+            document.getElementById('questionType').textContent = 
+                state.currentQ.type === 'fill' ? '成语填空' :
+                state.currentQ.type === 'guess' ? '看图猜成语' : '成语接龙';
+            document.getElementById('questionText').textContent = state.currentQ.q;
+            document.getElementById('hintText').style.display = 'none';
+            
+            // 生成答题区域
+            const answerInput = document.getElementById('answerInput');
+            const options = document.getElementById('options');
+            
+            if (state.currentQ.type === 'fill') {
+                answerInput.style.display = 'flex';
+                options.style.display = 'none';
+                
+                const answerLen = state.currentQ.a.length;
+                answerInput.innerHTML = '';
+                for (let i = 0; i < answerLen; i++) {
+                    answerInput.innerHTML += `<input class="answer-char" maxlength="1" data-idx="${i}" oninput="handleCharInput(this, ${i})">`;
+                }
+            } else {
+                answerInput.style.display = 'none';
+                options.style.display = 'grid';
+                
+                // 生成选项
+                const chars = state.currentQ.a.split('');
+                const optionsArr = [...chars];
+                // 添加干扰选项
+                const干扰 = '天地人物山河日月春夏秋冬花木草虫鸟兽鱼虫手足口耳目头胸心思'.split('');
+                while (optionsArr.length < 4) {
+                    const r = 干扰[Math.floor(Math.random() * 干扰.length)];
+                    if (!optionsArr.includes(r)) optionsArr.push(r);
+                }
+                // 随机排序
+                optionsArr.sort(() => Math.random() - 0.5);
+                
+                options.innerHTML = optionsArr.map((o, i) => 
+                    `<button class="option-btn" onclick="selectOption('${o}', this)">${o}</button>`
+                ).join('');
+            }
+            
+            state.userAnswer = '';
+        }
+        
+        // 填空输入处理
+        function handleCharInput(input, idx) {
+            const val = input.value;
+            if (val) {
+                const inputs = document.querySelectorAll('.answer-char');
+                if (idx < inputs.length - 1) {
+                    inputs[idx + 1].focus();
+                }
+            }
+            updateUserAnswer();
+        }
+        
+        // 更新用户答案
+        function updateUserAnswer() {
+            if (state.currentQ.type === 'fill') {
+                const inputs = document.querySelectorAll('.answer-char');
+                state.userAnswer = Array.from(inputs).map(i => i.value || '_').join('');
+            }
+        }
+        
+        // 选择选项
+        function selectOption(char, btn) {
+            document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            state.userAnswer = char;
+        }
+        
+        // 使用提示
+        function useHint() {
+            if (state.hintUsed) return;
+            if (state.coins < 10) {
+                alert('金币不足!');
+                return;
+            }
+            
+            state.coins -= 10;
+            state.hintUsed = true;
+            saveState();
+            updateUI();
+            
+            document.getElementById('hintText').style.display = 'block';
+            document.getElementById('hintContent').textContent = state.currentQ.hint;
+        }
+        
+        // 提交答案
+        function submitAnswer() {
+            updateUserAnswer();
+            
+            const correct = state.currentQ.a;
+            const isCorrect = state.userAnswer === correct;
+            
+            if (isCorrect) {
+                showResult(true);
+            } else {
+                showResult(false);
+            }
+        }
+        
+        // 显示结果
+        function showResult(success) {
+            const modal = document.getElementById('resultModal');
+            const icon = document.getElementById('resultIcon');
+            const title = document.getElementById('resultTitle');
+            const msg = document.getElementById('resultMsg');
+            const reward = document.getElementById('resultReward');
+            
+            if (success) {
+                icon.textContent = '✅';
+                title.textContent = '回答正确!';
+                title.className = 'result-title success';
+                msg.textContent = '恭喜进入下一关!';
+                reward.style.display = 'block';
+                
+                const coinReward = state.hintUsed ? 5 : 10;
+                document.getElementById('rewardValue').textContent = coinReward;
+                state.coins += coinReward;
+            } else {
+                icon.textContent = '❌';
+                title.textContent = '回答错误!';
+                title.className = 'result-title error';
+                msg.textContent = `正确答案是: ${state.currentQ.a}`;
+                reward.style.display = 'none';
+                
+                document.getElementById('questionCard').classList.add('shake');
+                setTimeout(() => {
+                    document.getElementById('questionCard').classList.remove('shake');
+                }, 300);
+            }
+            
+            saveState();
+            modal.classList.add('show');
+        }
+        
+        // 下一关
+        function nextLevel() {
+            document.getElementById('resultModal').classList.remove('show');
+            
+            if (state.energy < 1) {
+                document.getElementById('game').style.display = 'none';
+                document.getElementById('home').style.display = 'block';
+                alert('体力不足! 请等待恢复或看广告');
+                return;
+            }
+            
+            state.level++;
+            saveState();
+            updateUI();
+            loadQuestion();
+        }
+        
+        // 每日挑战
+        function showDaily() {
+            alert('每日挑战即将上线!');
+        }
+        
+        // 我的收藏
+        function showCollection() {
+            alert('收藏功能即将上线!');
+        }
+        
+        // 体力恢复
+        setInterval(() => {
+            if (state.energy < 20) {
+                state.energy++;
+                saveState();
+                updateUI();
+            }
+        }, 5 * 60 * 1000); // 5分钟恢复1点
+        
+        // 初始化
+        init();
+    </script>
+</body>
+</html>

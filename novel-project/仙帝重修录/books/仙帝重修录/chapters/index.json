@@ -1,0 +1,326 @@
+[
+  {
+    "number": 1,
+    "title": "仙帝重生",
+    "status": "imported",
+    "wordCount": 3105,
+    "createdAt": "2026-03-19T12:50:43.473Z",
+    "updatedAt": "2026-03-19T12:50:43.473Z",
+    "auditIssues": []
+  },
+  {
+    "number": 2,
+    "title": "道基初成",
+    "status": "imported",
+    "wordCount": 3346,
+    "createdAt": "2026-03-19T12:51:52.616Z",
+    "updatedAt": "2026-03-19T12:51:52.616Z",
+    "auditIssues": []
+  },
+  {
+    "number": 3,
+    "title": "族比开始",
+    "status": "imported",
+    "wordCount": 3011,
+    "createdAt": "2026-03-19T12:52:54.079Z",
+    "updatedAt": "2026-03-19T12:52:54.079Z",
+    "auditIssues": []
+  },
+  {
+    "number": 4,
+    "title": "连胜两场",
+    "status": "imported",
+    "wordCount": 3314,
+    "createdAt": "2026-03-19T12:53:59.003Z",
+    "updatedAt": "2026-03-19T12:53:59.003Z",
+    "auditIssues": []
+  },
+  {
+    "number": 5,
+    "title": "黑风山秘境",
+    "status": "imported",
+    "wordCount": 3937,
+    "createdAt": "2026-03-19T12:55:26.010Z",
+    "updatedAt": "2026-03-19T12:55:26.010Z",
+    "auditIssues": []
+  },
+  {
+    "number": 6,
+    "title": "传送阵中",
+    "status": "imported",
+    "wordCount": 3494,
+    "createdAt": "2026-03-19T12:56:32.895Z",
+    "updatedAt": "2026-03-19T12:56:32.895Z",
+    "auditIssues": []
+  },
+  {
+    "number": 7,
+    "title": "父亲重伤，复仇之路",
+    "status": "imported",
+    "wordCount": 4687,
+    "createdAt": "2026-03-19T12:58:00.852Z",
+    "updatedAt": "2026-03-19T12:58:00.852Z",
+    "auditIssues": []
+  },
+  {
+    "number": 8,
+    "title": "灵虚学院新生测试",
+    "status": "imported",
+    "wordCount": 5330,
+    "createdAt": "2026-03-19T12:59:31.979Z",
+    "updatedAt": "2026-03-19T12:59:31.979Z",
+    "auditIssues": []
+  },
+  {
+    "number": 9,
+    "title": "灵虚学院",
+    "status": "imported",
+    "wordCount": 4229,
+    "createdAt": "2026-03-19T13:01:07.407Z",
+    "updatedAt": "2026-03-19T13:01:07.407Z",
+    "auditIssues": []
+  },
+  {
+    "number": 10,
+    "title": "功法阁与法宝",
+    "status": "imported",
+    "wordCount": 4900,
+    "createdAt": "2026-03-19T13:02:52.678Z",
+    "updatedAt": "2026-03-19T13:02:52.678Z",
+    "auditIssues": []
+  },
+  {
+    "number": 11,
+    "title": "暗流涌动",
+    "status": "imported",
+    "wordCount": 3852,
+    "createdAt": "2026-03-19T13:04:37.634Z",
+    "updatedAt": "2026-03-19T13:04:37.634Z",
+    "auditIssues": []
+  },
+  {
+    "number": 12,
+    "title": "试炼之地",
+    "status": "imported",
+    "wordCount": 4102,
+    "createdAt": "2026-03-19T13:06:35.697Z",
+    "updatedAt": "2026-03-19T13:06:35.697Z",
+    "auditIssues": []
+  },
+  {
+    "number": 13,
+    "title": "突破与领悟",
+    "status": "imported",
+    "wordCount": 2633,
+    "createdAt": "2026-03-19T13:08:30.831Z",
+    "updatedAt": "2026-03-19T13:08:30.831Z",
+    "auditIssues": []
+  },
+  {
+    "number": 14,
+    "title": "路途遇险",
+    "status": "imported",
+    "wordCount": 3204,
+    "createdAt": "2026-03-19T13:10:48.042Z",
+    "updatedAt": "2026-03-19T13:10:48.042Z",
+    "auditIssues": []
+  },
+  {
+    "number": 15,
+    "title": "天机阁",
+    "status": "imported",
+    "wordCount": 3121,
+    "createdAt": "2026-03-19T13:13:11.675Z",
+    "updatedAt": "2026-03-19T13:13:11.675Z",
+    "auditIssues": []
+  },
+  {
+    "number": 16,
+    "title": "途中领悟",
+    "status": "imported",
+    "wordCount": 3435,
+    "createdAt": "2026-03-19T13:16:20.826Z",
+    "updatedAt": "2026-03-19T13:16:20.826Z",
+    "auditIssues": []
+  },
+  {
+    "number": 17,
+    "title": "遗迹深处",
+    "status": "imported",
+    "wordCount": 3310,
+    "createdAt": "2026-03-19T13:19:37.963Z",
+    "updatedAt": "2026-03-19T13:19:37.963Z",
+    "auditIssues": []
+  },
+  {
+    "number": 18,
+    "title": "真相大白",
+    "status": "imported",
+    "wordCount": 3170,
+    "createdAt": "2026-03-19T13:22:49.448Z",
+    "updatedAt": "2026-03-19T13:22:49.448Z",
+    "auditIssues": []
+  },
+  {
+    "number": 19,
+    "title": "返回学院",
+    "status": "imported",
+    "wordCount": 2343,
+    "createdAt": "2026-03-19T13:26:22.536Z",
+    "updatedAt": "2026-03-19T13:26:22.536Z",
+    "auditIssues": []
+  },
+  {
+    "number": 20,
+    "title": "天道山",
+    "status": "imported",
+    "wordCount": 3005,
+    "createdAt": "2026-03-19T13:30:31.065Z",
+    "updatedAt": "2026-03-19T13:30:31.065Z",
+    "auditIssues": []
+  },
+  {
+    "number": 21,
+    "title": "功法大成",
+    "status": "imported",
+    "wordCount": 2594,
+    "createdAt": "2026-03-19T13:34:54.181Z",
+    "updatedAt": "2026-03-19T13:34:54.181Z",
+    "auditIssues": []
+  },
+  {
+    "number": 22,
+    "title": "筑基丹",
+    "status": "imported",
+    "wordCount": 2672,
+    "createdAt": "2026-03-19T13:38:39.483Z",
+    "updatedAt": "2026-03-19T13:38:39.483Z",
+    "auditIssues": []
+  },
+  {
+    "number": 23,
+    "title": "启程",
+    "status": "imported",
+    "wordCount": 2290,
+    "createdAt": "2026-03-19T13:42:42.106Z",
+    "updatedAt": "2026-03-19T13:42:42.106Z",
+    "auditIssues": []
+  },
+  {
+    "number": 24,
+    "title": "考核风云",
+    "status": "imported",
+    "wordCount": 3744,
+    "createdAt": "2026-03-19T13:46:32.782Z",
+    "updatedAt": "2026-03-19T13:46:32.782Z",
+    "auditIssues": []
+  },
+  {
+    "number": 25,
+    "title": "天元潜修",
+    "status": "imported",
+    "wordCount": 2824,
+    "createdAt": "2026-03-19T13:50:22.057Z",
+    "updatedAt": "2026-03-19T13:50:22.057Z",
+    "auditIssues": []
+  },
+  {
+    "number": 26,
+    "title": "修为精进",
+    "status": "imported",
+    "wordCount": 2450,
+    "createdAt": "2026-03-19T13:53:57.766Z",
+    "updatedAt": "2026-03-19T13:53:57.766Z",
+    "auditIssues": []
+  },
+  {
+    "number": 27,
+    "title": "闭关突破",
+    "status": "imported",
+    "wordCount": 2468,
+    "createdAt": "2026-03-19T13:57:24.493Z",
+    "updatedAt": "2026-03-19T13:57:24.493Z",
+    "auditIssues": []
+  },
+  {
+    "number": 28,
+    "title": "遗迹惊鸿",
+    "status": "imported",
+    "wordCount": 4377,
+    "createdAt": "2026-03-19T14:01:04.313Z",
+    "updatedAt": "2026-03-19T14:01:04.313Z",
+    "auditIssues": []
+  },
+  {
+    "number": 29,
+    "title": "父子重逢",
+    "status": "imported",
+    "wordCount": 3278,
+    "createdAt": "2026-03-19T14:04:45.641Z",
+    "updatedAt": "2026-03-19T14:04:45.641Z",
+    "auditIssues": []
+  },
+  {
+    "number": 30,
+    "title": "稳固根基",
+    "status": "imported",
+    "wordCount": 4200,
+    "createdAt": "2026-03-20T00:37:00.000Z",
+    "updatedAt": "2026-03-20T00:37:00.000Z",
+    "auditIssues": []
+  },
+  {
+    "number": 31,
+    "title": "外出历练",
+    "status": "imported",
+    "wordCount": 3200,
+    "createdAt": "2026-03-20T08:46:00.000Z",
+    "updatedAt": "2026-03-20T08:46:00.000Z",
+    "auditIssues": []
+  },
+  {
+    "number": 32,
+    "title": "峡谷遗迹",
+    "status": "imported",
+    "wordCount": 2500,
+    "createdAt": "2026-03-20T13:41:00.000Z",
+    "updatedAt": "2026-03-20T13:41:00.000Z",
+    "auditIssues": []
+  },
+  {
+    "number": 33,
+    "title": "突破",
+    "status": "imported",
+    "wordCount": 2400,
+    "createdAt": "2026-03-20T13:41:00.000Z",
+    "updatedAt": "2026-03-20T13:41:00.000Z",
+    "auditIssues": []
+  },
+  {
+    "number": 34,
+    "title": "脱险",
+    "status": "imported",
+    "wordCount": 2100,
+    "createdAt": "2026-03-20T13:34:00.000Z",
+    "updatedAt": "2026-03-20T13:34:00.000Z",
+    "auditIssues": []
+  },
+  {
+    "number": 35,
+    "title": "血影追踪",
+    "status": "audit-failed",
+    "wordCount": 1044,
+    "createdAt": "2026-03-21T09:00:00.000Z",
+    "updatedAt": "2026-03-21T02:01:37.527Z",
+    "auditIssues": [
+      "[critical] 叶辰性格出现严重偏离，变得过于被动消极。原文中'以我现在的实力，确实无法正面抗衡'、'面对元婴境初期，施展底牌或可保命，但正面抗衡仍不可能'等表述与其杀伐果断、恩怨分明的人设不符。",
+      "[critical] 战力设定前后矛盾。第34章叶辰刚从元婴境统领手中逃脱，展现出了相当的战斗能力，但本章却表现得对元婴境初期都感到畏惧，战力评价过低。",
+      "[warning] 连续3章（第33-35章）均为修炼章，缺乏战斗、揭秘、情感等其他类型章节，节奏单调。",
+      "[warning] 多个重要支线超过5章未推进：师父死亡真相（29章后停滞）、天魔威胁（29章后停滞）、混沌仙帝传承（29章后停滞）、刺杀皇帝任务（29章后停滞）。",
+      "[warning] 本章缺乏明确爽点，主要是修炼突破，没有打脸、升级突破、收益兑现、智斗碾压等爽点类型。",
+      "[warning] 黑无常长老作为元婴境巅峰强者，给出的建议过于简单保守，没有展现出应有的智慧和战略眼光。",
+      "[warning] 高频词汇使用过多：'血影宗'出现8次，'元婴境'出现6次，'金丹境'出现7次，'叶辰'出现15次。",
+      "[info] AI标记词密度过高：'仿佛'、'心中'等在3000字内出现多次，超过标准。"
+    ]
+  }
+]
