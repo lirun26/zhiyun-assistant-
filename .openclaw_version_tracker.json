@@ -1,0 +1,7 @@
+{
+  "current_version": "2026.3.28",
+  "monitor_target": "2026.4.1",
+  "release_date": "2026-04-01",
+  "check_after": "2026-04-05",
+  "notify": true
+}
