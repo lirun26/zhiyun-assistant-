@@ -31,10 +31,26 @@ bash skills/self-review/scripts/quick_evolve.sh status
 
 ---
 
-## 今日工作（2026-04-01 周三）
+## 今日工作（2026-04-07 周二）
 
-### ✅ 2026-04-01 完成
-- [x] 加密货币早报自动发送成功（BTC $68,337 / ETH $2,113）
+### ⏰ 当前时间：11:20 AM
+
+### ✅ 2026-04-07 已完成
+- [x] 系统连接检查正常（Gateway运行中）
+- [x] 钉钉消息通道正常
+- [x] 进化早报已生成（08:00）
+- [x] 加密货币报告已手动执行（09:35）
+- [x] 配置文件修复（openclaw doctor --fix）
+- [x] 安全审计完成并修复（Control UI认证、钉钉白名单、速率限制）
+- [x] Gateway安全重启完成
+
+### ⚠️ 待处理
+- [ ] 加密货币 cron 脚本 PATH 问题（openclaw 命令找不到）- 脚本可手动运行，但需要修复PATH
+- [ ] 钉钉插件升级到 3.5.2（当前 3.4.2）
+- [ ] 创建加密货币定时任务（09:00自动执行）
+
+### ✅ 2026-04-07 完成
+- [x] 加密货币早报手动发送成功（BTC $68,768 / ETH $2,113 / SOL $80 / BNB $599）
 - [x] 钉钉推送成功
 
 ### ⚠️ 待处理
@@ -111,3 +127,23 @@ bash skills/self-review/scripts/quick_evolve.sh status
 ---
 
 _智云助手 2026-03-31 凌晨_
+
+## 钉钉插件自动修复脚本（2026-04-06）
+
+### 创建原因
+OpenClaw版本升级后，`plugin-sdk/telegram-core`模块被移除，导致钉钉插件加载失败。
+
+### 脚本位置
+`/home/admin/.openclaw/workspace/scripts/fix-dingtalk.sh`
+
+### 使用方法
+```bash
+# 升级OpenClaw后运行:
+bash /home/admin/.openclaw/workspace/scripts/fix-dingtalk.sh
+
+# 然后重启Gateway:
+openclaw gateway restart
+```
+
+### 原理
+脚本自动检测并替换`channel.ts`中的旧import为兼容shim。

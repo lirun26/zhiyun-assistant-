@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-07T01:42:51.402Z",
+  "entries": {
+    "memory:memory/2026-03-24.md:1:27": {
+      "key": "memory:memory/2026-03-24.md:1:27",
+      "path": "memory/2026-03-24.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# 2026-03-24 工作日志 ## 📅 日期 2026-03-24 (Tuesday) --- ## ✅ 今日完成 - [ ] --- ## 📌 待办 - [ ] --- ## 🧠 重要记忆 - --- _持续更新中_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.5008908033370971,
+      "maxScore": 0.5008908033370971,
+      "firstRecalledAt": "2026-04-06T23:19:02.972Z",
+      "lastRecalledAt": "2026-04-06T23:19:02.972Z",
+      "queryHashes": [
+        "6d1eb12cd5f8"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "工作",
+        "日志",
+        "日期",
+        "tuesday",
+        "今日",
+        "完成",
+        "重要",
+        "记忆"
+      ]
+    },
+    "memory:memory/2026-03-22.md:1:27": {
+      "key": "memory:memory/2026-03-22.md:1:27",
+      "path": "memory/2026-03-22.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# 2026-03-22 工作日志 ## 📅 日期 2026-03-22 (Sunday) --- ## ✅ 今日完成 - [ ] --- ## 📌 待办 - [ ] --- ## 🧠 重要记忆 - --- _持续更新中_",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 0.8579373180866241,
+      "maxScore": 0.4891207784414291,
+      "firstRecalledAt": "2026-04-06T23:19:02.972Z",
+      "lastRecalledAt": "2026-04-07T01:42:51.402Z",
+      "queryHashes": [
+        "6d1eb12cd5f8",
+        "c0c107447cac"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "工作",
+        "日志",
+        "日期",
+        "sunday",
+        "今日",
+        "完成",
+        "重要",
+        "记忆"
+      ]
+    },
+    "memory:memory/2026-03-14.md:1:48": {
+      "key": "memory:memory/2026-03-14.md:1:48",
+      "path": "memory/2026-03-14.md",
+      "startLine": 1,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "# 2026-03-14 工作日志 ## 用户信息 - 名字：文鑫 - 称呼：老大 - 时区：Asia/Shanghai ## 今日完成事项 1. **系统初始化** - 创建 BOOTSTRAP.md、SOUL.md、USER.md、MEMORY.md、HEARTBEAT.md、IDENTITY.md 2. **技能安装（52个）** - 基础、搜索、自动化、文件、新闻、飞书、办公、量化交易、副业、小红书等 3. **ClawHub 配置** - 账号：@lirun26 - token：clh_pzDi8pHpxwUy8-hB730M9C7ja_Gr2vH_o13eEp0e0xU 4. **系统维护** - 更新 OpenClaw 至 2026.3.13 - 外网访问：Cloudflare Tunnel 5. **API 配置** - Tavily API：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 6. **通道配置** - 飞书：已配置 - 钉钉：Client ID dingqgvaaxii7septwv2，已测试成功 7. **定时新闻推送** - 设置每天9点自动推送（待修复Cron） 8. **商业计划** - 目标：第6个月收入 ¥60,000 ## 待办 - [ ] Cron 定时推送修复 - [ ] 小红书 MCP 登录 - [ ] 短视频素材包项目（天亮开始） - [ ] 闲鱼店铺准备 ## 重要",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.405097284913063,
+      "maxScore": 0.405097284913063,
+      "firstRecalledAt": "2026-04-06T23:19:02.972Z",
+      "lastRecalledAt": "2026-04-06T23:19:02.972Z",
+      "queryHashes": [
+        "6d1eb12cd5f8"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "asia/shanghai",
+        "bootstrap.md",
+        "soul.md",
+        "user.md",
+        "memory.md",
+        "heartbeat.md",
+        "identity.md",
+        "2026.3.13"
+      ]
+    },
+    "memory:memory/2026-03-30.md:1:47": {
+      "key": "memory:memory/2026-03-30.md:1:47",
+      "path": "memory/2026-03-30.md",
+      "startLine": 1,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "# 2026-03-30 日记 ## 日期 2026-03-30（周一） ## 早晨会话记录 ### 记忆文件检查 - 检查了 HOT_MEMORY.md 和 2026-03-30.md - 确认最后活跃时间为 2026-03-29 22:47 - 2026-03-30.md 是新文件，正常 ### 执行操作 - 应老大要求更新记忆文件 - 更新 HOT_MEMORY.md（刷新时间戳） - 创建 2026-03-30.md ## 系统状态 - Gateway: 正常运行 - 磁盘: 释放12.5G后可用13G（总49G） - 技能: 157个 ## 待处理 - 视频API Key申请 - 阿里悟空邀请码 - 小红书MCP配置 - dream-to-video 付费方案 ## 晚间更新（20:11） ### 加密货币报告 - 9:00 cron未执行（缺openclaw命令） - 11:42手动触发成功，发送钉钉 - BTC $67,187 | ETH $2,035 | SOL $83 | BNB $616 ### 小说进度确认 - 老大确认51-52章已发送 - 已更新MEMORY.md（2026-03-30晚） ### 系统状态 - 磁盘: 24G/49G (51%)，可用23G - 内存: 1.9G可用 --- _智云助手 2026-03-30 晚_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.40044864714145656,
+      "maxScore": 0.40044864714145656,
+      "firstRecalledAt": "2026-04-06T23:19:02.972Z",
+      "lastRecalledAt": "2026-04-06T23:19:02.972Z",
+      "queryHashes": [
+        "6d1eb12cd5f8"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "gateway",
+        "hot-memory.md",
+        "释放12.5g后可用13g",
+        "dream-to-video",
+        "老大确认51-52章已发送",
+        "已更新memory.md",
+        "2026-03-30晚",
+        "24g/49g"
+      ]
+    },
+    "memory:memory/2026-03-29.md:1:47": {
+      "key": "memory:memory/2026-03-29.md:1:47",
+      "path": "memory/2026-03-29.md",
+      "startLine": 1,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "# 2026-03-29 工作日志 ## 📅 日期 2026-03-29 (周日) --- ## ✅ 今日完成 ### 系统维护 - [x] 系统健康检查（OpenClaw 2026.3.28 / Node 24.14 / Docker 28.2.2） - [x] 磁盘清理：释放 ~12.5G（uv缓存7.6G + pip缓存3G + Docker镜像1.9G） - 清理前：36G/49G (76%) - 清理后：24G/49G (51%) ### 技能管理 - [x] 安装 dream-to-video（mediastormDev） - [x] 安装 slavingia/skills（10个极客企业家技能） - minimalist-review, company-values, grow-sustainably, marketing-plan, pricing - first-customers, find-community, validate-idea, processize, mvp - [x] 符号链接到 OpenClaw 技能库 - [x] 修复 playwright_stealth 依赖 ### OpenClaw 版本调研 - [x] 分析 2026.3.28 新功能： - xAI/Grok 集成 + Responses API - MiniMax 图片生成（image-01） - before_tool_call 钩子（支持 /approve） - ACP 会话绑定增强 - OpenAI apply_patch",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.3948532879352569,
+      "maxScore": 0.3948532879352569,
+      "firstRecalledAt": "2026-04-06T23:19:02.972Z",
+      "lastRecalledAt": "2026-04-06T23:19:02.972Z",
+      "queryHashes": [
+        "6d1eb12cd5f8"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "openai",
+        "2026.3.28",
+        "24.14",
+        "28.2.2",
+        "12.5g",
+        "uv缓存7.6g",
+        "docker镜像1.9g",
+        "36g/49g"
+      ]
+    },
+    "memory:memory/2026-03-15.md:1:36": {
+      "key": "memory:memory/2026-03-15.md:1:36",
+      "path": "memory/2026-03-15.md",
+      "startLine": 1,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "# 2026-03-15 工作日志 ## 日期 2026-03-15 (周日) --- ## 今日完成 ### 系统维护 - [x] 云服务器相关操作（cloudflared 等） - [x] 安装 openclaw-control-center - [x] 安装 novel-project / novel-output（小说系统） ### 变现方向研究 - [x] 完成《变现方向深度研究》文档 - 方向1：小红书 AI 副业博主 - 方向2：AI 新闻 Newsletter - 方向3：短视频脚本代工 - 方向4：自由职业接单 - 方向5：加密货币量化 - [x] 收入目标规划：6个月 ¥30,000，12个月 ¥60,000 ### 待处理 - [ ] 加密货币交易（等 Bitget 审核） --- ## 备注 - 3月15日记忆文件为补录，部分内容基于文件时间戳推断 - 如有遗漏，请补充指正 --- _持续更新中_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.3918091595172882,
+      "maxScore": 0.3918091595172882,
+      "firstRecalledAt": "2026-04-06T23:19:02.972Z",
+      "lastRecalledAt": "2026-04-06T23:19:02.972Z",
+      "queryHashes": [
+        "6d1eb12cd5f8"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "openclaw-control-center",
+        "novel-project",
+        "novel-output",
+        "工作",
+        "日志",
+        "日期",
+        "周日",
+        "今日"
+      ]
+    },
+    "memory:memory/2026-03-26.md:1:91": {
+      "key": "memory:memory/2026-03-26.md:1:91",
+      "path": "memory/2026-03-26.md",
+      "startLine": 1,
+      "endLine": 91,
+      "source": "memory",
+      "snippet": "的气息正在苏醒 ### 小说第43章内容（老大发送） **标题：北狱冰原** - 叶辰、黑无常、柳梦乘飞舟前往北极冰原 - **血影宗二长老血阎罗（元婴境中期）**伏击 - 叶辰击败元婴境中期血阎罗（万剑归宗穿心） - 发现上古封印，魔物冲击封印 - **冰魔现身**（元婴境巅峰） - 冰魔解释：天魔复活倒计时（九天十夜后的月圆之夜） - 冰魔反水：愿与叶辰合作，因为天魔复活会吞噬它 - 三人冲入封印深处 - 修为：金丹境五重 ### 系统检查（17:27） - ✅ Gateway 运行正常 (pid 363743) - ✅ OpenClaw 版本 2026.3.23-2 - ⚠️ 加密货币报告错误：openclaw 命令路径问题（脚本执行环境PATH问题） - ⚠️ 更新可用：2026.3.24 ## 17:57 火宝短剧工作记录 ### 完成状态 - ✅ 火宝短剧已部署 (http://47.238.108.238:5678) - ✅ 硅基流动 API Key 已配置 (sk-nzdnhlqdoqdpiyhpeabpqaegyikqahtiooxkepkxrjpyrlxw) - ✅ 短剧《御剑飞仙录》已创建 - ✅ 第一集剧本已生成 - ✅ 角色人设已创建（林逸、神秘声音） - ✅ 10个分镜头已生成 ### 待处理 - ⏳ 生成角色图片 - ⏳ 生成分镜图片 - ⏳ 生成视频 ### 短剧信息 - 标题：御剑飞仙录 - 类型：仙侠 - 第1集：御剑初成 - 容器：huobao-drama (Docker) ### 后续操作 1. 访问 http://47.2",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 0.7658804714679717,
+      "maxScore": 0.3863734126091003,
+      "firstRecalledAt": "2026-04-07T00:01:19.304Z",
+      "lastRecalledAt": "2026-04-07T00:05:11.548Z",
+      "queryHashes": [
+        "12b53e9caf2c",
+        "f42c5fc19b4d"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "gateway",
+        "2026.3.23-2",
+        "2026.3.24",
+        "47.238.108.238",
+        "huobao-drama",
+        "47.2",
+        "气息",
+        "正在"
+      ]
+    },
+    "memory:memory/2026-03-20.md:1:76": {
+      "key": "memory:memory/2026-03-20.md:1:76",
+      "path": "memory/2026-03-20.md",
+      "startLine": 1,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "# 2026-03-20 工作日志 ## 📅 日期：2026-03-20 ## 🎯 今日完成工作 ### 1. 技能安装（6个新技能） - deep-scraper（深度爬虫）- Docker + Playwright，可爬YouTube/Twitter - devops（DevOps全能）- CI/CD、部署、容器最佳实践 - sora-video-gen（Sora视频生成）- 文生视频/图生视频 - claude-code（Claude Code集成）- 编程子任务、文档查询 - video-frames（视频帧提取）- ffmpeg提取单帧 - workflow-builder（工作流设计）- 流程设计、审批流 - mcp-hass（Home Assistant）- 智能家居控制 ### 2. 项目研究 - alibaba/page-agent（⭐11.2k）- 阿里网页AI Agent，已测试 - RedBox - 小红书版OpenClaw ### 3. 系统配置 - Docker安装成功（v28.2.2） - 构建clawd-crawlee镜像（1.52GB） - 修复deep-scraper依赖问题（添加procps） ### 4. 深度爬虫测试 - ✅ 成功爬取YouTube视频（Rick Astley - Never Gonna Give You Up） - ✅ 提取完整歌词字幕 - ⚠️ Twitter/X需要登录，知乎/百度被反爬 ### 5. 百度热搜 - ✅ 成功抓取15条热点 - ✅ 设置每日8点定时推送（cron已配置） - ✅ 测",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.35455626249313354,
+      "maxScore": 0.35455626249313354,
+      "firstRecalledAt": "2026-04-07T00:01:19.304Z",
+      "lastRecalledAt": "2026-04-07T00:01:19.304Z",
+      "queryHashes": [
+        "12b53e9caf2c"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "deep-scraper",
+        "可爬youtube/twitter",
+        "ci/cd",
+        "sora-video-gen",
+        "文生视频/图生视频",
+        "claude-code",
+        "video-frames",
+        "workflow-builder"
+      ]
+    },
+    "memory:memory/2026-03-29.md:41:76": {
+      "key": "memory:memory/2026-03-29.md:41:76",
+      "path": "memory/2026-03-29.md",
+      "startLine": 41,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "- 即梦\"Agent模式\"和\"视频生成\"模式是两套不同UI - 代码在 Agent 模式（placeholder='城市'），不是视频模式 - 生成按钮始终 disabled ### 调试过程 1. 检查 batch_state.json：task_000 submitted 4小时后超时 failed 2. xvfb-run 调试发现：placeholder='城市' 是小城市搜索框 3. \"视频模式已激活: False\" - 点击切换失败 4. 老大截图显示：Agent 创作模式，需要先切换 ### 结论 - 暂停调试，等老大确认操作流程 - 老大说\"即梦有钱\"，考虑付费/其他方案 --- ## 📝 待办 - [ ] 视频API Key申请（硅基流动 / 即梦付费） - [ ] 阿里悟空邀请码 - [ ] 小红书MCP cookies配置 --- _智云助手 2026-03-29 记录_ --- ## 技能列表（2026-03-28安装，共28个） adaptive-reasoning, memory-never-forget, self-improving, planning-with-files, focus-deep-work, market-research, in-depth-research, research-engine, focus-tracker, automation-workflows-0-1-0, market-analysis-cn, creative-thought-partner, document-summary,",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.3518642574548721,
+      "maxScore": 0.3518642574548721,
+      "firstRecalledAt": "2026-04-07T00:01:19.304Z",
+      "lastRecalledAt": "2026-04-07T00:01:19.304Z",
+      "queryHashes": [
+        "12b53e9caf2c"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "batch-state.json",
+        "task-000",
+        "xvfb-run",
+        "考虑付费/其他方案",
+        "2026-03-28安装",
+        "adaptive-reasoning",
+        "memory-never-forget",
+        "self-improving"
+      ]
+    },
+    "memory:memory/2026-03-21.md:79:143": {
+      "key": "memory:memory/2026-03-21.md:79:143",
+      "path": "memory/2026-03-21.md",
+      "startLine": 79,
+      "endLine": 143,
+      "source": "memory",
+      "snippet": "# 🔥 待处理 - [x] 第41章大纲讨论（已讨论，等待创作） - [x] 更新MEMORY.md小说部分",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.39989420771598816,
+      "maxScore": 0.39989420771598816,
+      "firstRecalledAt": "2026-04-07T01:42:51.402Z",
+      "lastRecalledAt": "2026-04-07T01:42:51.402Z",
+      "queryHashes": [
+        "c0c107447cac"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "更新memory.md小说部分",
+        "处理",
+        "大纲",
+        "讨论",
+        "等待",
+        "创作",
+        "更新",
+        "memory.md"
+      ]
+    },
+    "memory:memory/2026-04-07.md:108:142": {
+      "key": "memory:memory/2026-04-07.md:108:142",
+      "path": "memory/2026-04-07.md",
+      "startLine": 108,
+      "endLine": 142,
+      "source": "memory",
+      "snippet": "### 需要注意的事项 1. ⚠️ 内存使用率较高（79.4%），建议监控 2. ⚠️ 系统负载偏高（2.67），但新启动系统正常 3. ✅ 磁盘空间充足（18G可用） --- ## 📋 建议操作 ### 立即执行 1. 监控内存使用，如持续高位可考虑重启部分服务 2. 检查是否有异常进程占用资源 ### 日常维护 1. 定期清理日志文件 2. 检查定时任务执行状态 3. 备份重要数据 --- ## 🎯 当前活跃项目 ### 小说创作 - 《重生末世废土之生存法则》：01-14章已完成 - 创作流程：大纲→扩展→审核 - 状态：进行中 ### 系统进化 - 自我进化系统已配置 - 每日复盘和早报定时任务 --- _系统检查完成时间：2026-04-07 07:18_ _检查人：智云助手_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.3726382851600647,
+      "maxScore": 0.3726382851600647,
+      "firstRecalledAt": "2026-04-07T01:42:51.402Z",
+      "lastRecalledAt": "2026-04-07T01:42:51.402Z",
+      "queryHashes": [
+        "c0c107447cac"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "备份",
+        "79.4",
+        "2.67",
+        "01-14章已完成",
+        "需要",
+        "注意",
+        "事项",
+        "内存"
+      ]
+    }
+  }
+}
