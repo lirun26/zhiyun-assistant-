@@ -109,7 +109,7 @@ def send_novel_chapter():
 def record_send_status(chapter_info, config):
     """记录发送状态到记忆文件"""
     record = f"""
-## 📧 邮件发送记录 - 《技能嫌我太懒，独自升级杀疯了》第4章
+## 📧 邮件发送记录 - 《技能嫌我太懒，独自升级》第4章
 
 **发送时间**: 2026-04-07 10:00
 **发送状态**: ✅ 成功
