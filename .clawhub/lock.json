@@ -712,6 +712,22 @@
     "continuous-evolution-automaton": {
       "version": "1.0.1",
       "installedAt": 1775360815958
+    },
+    "fengshui-advisor": {
+      "version": "1.0.0",
+      "installedAt": 1775875908012
+    },
+    "zhouyi-bazi": {
+      "version": "1.0.0",
+      "installedAt": 1775876718199
+    },
+    "novel-writing": {
+      "version": "1.2.0",
+      "installedAt": 1776001193462
+    },
+    "character-profile-cn": {
+      "version": "1.0.0",
+      "installedAt": 1776001231825
     }
   }
 }

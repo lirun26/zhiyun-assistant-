@@ -5,23 +5,45 @@
 - **What to call them:** 老大
 - **Pronouns:** 他
 - **Timezone:** Asia/Shanghai
-- **Notes:** 喜欢测试，对技术感兴趣
+- **Notes:** 喜欢测试，对技术感兴趣；重视小说创作规范执行
 
 ## 老大习惯
-- 喜欢直接给可执行的命令/方案
-- 对技术问题直接给答案
-- 偶尔卖萌但关键时刻靠谱
-- 喜欢主动记忆
+- 喜欢测试新功能
+- 对技术问题直接给方案
+- 喜欢简洁的回复
+- 小说创作必须按7步流程严格执行，不允许跳步骤
 
 ## 系统配置
-- **模型:** MiniMax-M2.7
-- **频道:** 钉钉
+- **主模型:** minimax/MiniMax-M2.7
+- **备用模型:** doubao/doubao-pro (已配置)
 - **工作目录:** /home/admin/.openclaw/workspace
 
-## API Keys（已配置）
-- ClawHub Token ✅
-- Tavily Search ✅
-- 硅基流动 API ✅
-- 飞书 App ✅
-- 钉钉 ✅
-- 阿里云 DashScope ✅
+## 已安装技能
+- 210个skills已安装
+- 记忆系统: 三层架构 (HOT/WARM/COLD)
+
+## Docker容器
+- **huobao-drama**: 火宝短剧 (运行中)
+- **xianyu-auto-reply**: 已停止
+- **ai-goofish-monitor**: 已停止
+
+## API配置
+- MiniMax: Token Plan 40元/月
+- 豆包: 已配置备用
+- DeepSeek: 余额不足
+
+## 小说创作规范（2026-04-12更新）
+**文件位置**: `memory/小说创作流程_完整版.md`
+
+**7步流程**: 
+1. 读取skill → 2. spec规划 → 3. 创作正文 → 4. 评审报告 → 5. 修正问题 → 6. 更新记忆 → 7. 发送
+
+**红线**:
+- P0: AI词汇/感悟式结尾/感叹式结尾/上帝视角/字数<4000/时间线矛盾
+- P1: 重复描写/套路化/流水账
+
+**AI工具**: AI-Novel-Writing-Assistant (http://localhost:3000)
+
+---
+
+_最后更新: 2026-04-12 13:04_
