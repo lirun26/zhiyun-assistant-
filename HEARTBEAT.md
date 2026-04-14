@@ -231,7 +231,7 @@ openclaw gateway restart
 
 #### 规范系统升级
 - [x] 8步创作流程写入MEMORY.md
-- [x] 33维度审计系统集成（inkos精华）
+- [x] 33维度审计系统集成
 - [x] 创建3个新记忆文件：
   - CHAPTERS.md（章节摘要）
   - HOOKS.md（伏笔追踪）

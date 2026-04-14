@@ -22,7 +22,7 @@ Good candidates:
 
 **Logged**: ISO-8601 timestamp
 **Priority**: low | medium | high | critical
-**Status**: pending
+**Status**: resolved
 **Area**: frontend | backend | infra | tests | docs | config
 
 ### Summary
@@ -46,3 +46,32 @@ What to try next time or how to prevent recurrence
 
 ---
 ```
+
+---
+
+## [ERR-20260414-001] ai-evolution-engine脚本路径错误
+
+**Logged**: 2026-04-14T15:14:00+08:00
+**Priority**: medium
+**Status**: resolved
+**Area**: infra
+
+### Summary
+ai-evolution-engine-v2的assess.mjs脚本中引用了错误的相对路径`../../skills`
+
+### Error
+```
+ENOENT: no such file or directory, scandir '../../skills'
+```
+
+### Context
+运行 `node skills/ai-evolution-engine-v2/scripts/assess.mjs`
+
+### Suggested Fix
+修复脚本中的路径引用，从`../../skills`改为正确的skills目录路径
+
+### Metadata
+- Reproducible: yes
+- Related Files: skills/ai-evolution-engine-v2/scripts/assess.mjs
+
+---
