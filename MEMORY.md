@@ -196,7 +196,7 @@ bash skills/daily-hot-push/push.sh
 
 ## 📰 已集成的实用Skill
 
-| Skill | 用途 | 路径 |
+| novel-ai-prompts | AI提示词模板库 | skills/novel-ai-prompts/ |
 |:---|:---|:---|
 | linfeng-novel | 番茄签约规范 | skills/linfeng-novel/ |
 | ai-evolution-engine-v2 | 自我进化 | skills/ai-evolution-engine-v2/ |
