@@ -478,3 +478,40 @@ grep -n "叶家\|叶氏" 第XX章*.md || echo "无姓氏错误 ✅"
 
 ---
 
+
+## 🧬 自我进化系统
+
+### 核心Skill（已集成）
+```bash
+# 进化状态检查
+bash skills/self-review/scripts/quick_evolve.sh status
+
+# 技能自检
+bash skills/auto-skill-evolver/scripts/self_check.sh
+
+# 每日热榜推送
+bash skills/daily-hot-push/push.sh
+```
+
+### 进化数据位置
+- 进化日志：`memory/evolution/YYYY-MM-DD.md`
+- 学习记录：`.learnings/LEARNINGS.md`
+- 错误记录：`.learnings/ERRORS.md`
+
+### 定时任务
+| 任务 | Cron | 功能 |
+|:---|:---|:---|
+| 每日自我复盘 | 0 0 18 * * * | 分析对话质量 |
+| 每日进化早报 | 0 0 8 * * * | 推送进化摘要 |
+| 每日热榜推送 | 0 8 * * * | 推送热榜到飞书 |
+
+---
+
+## 📰 实用Skill速查
+
+| Skill | 用途 | 命令 |
+|:---|:---|:---|
+| linfeng-novel | 番茄签约规范 | 读取 skills/linfeng-novel/SKILL.md |
+| daily-hot-push | 每日热榜 | bash skills/daily-hot-push/push.sh |
+| brave-search | 搜索工具 | web_search() |
+| ai-evolution-engine-v2 | 自我进化 | bash skills/ai-evolution-engine-v2/scripts/evolve.sh |

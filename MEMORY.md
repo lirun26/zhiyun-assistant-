@@ -161,6 +161,50 @@
 |:---|:---|:---|
 | 每日自我复盘 | 0 0 18 * * * | 分析对话质量 |
 | 每日进化早报 | 0 0 8 * * * | 推送进化摘要 |
+| 每日热榜推送 | 0 8 * * * | 推送微博/知乎/百度/36氪热榜 |
+
+---
+
+## 🧬 自我进化系统（已集成）
+
+### 核心Skill
+| Skill | 功能 | 状态 |
+|:---|:---|:---|
+| ai-evolution-engine-v2 | 每日评估+进化 | ✅ 已配置 |
+| auto-skill-evolver | 技能优化提案 | ✅ 可用 |
+| self-improving | 自我提升+记忆 | ✅ 已集成 |
+| daily-hot-push | 每日热榜推送 | ✅ 已配置 |
+
+### 快速命令
+```bash
+# 进化状态检查
+bash skills/self-review/scripts/quick_evolve.sh status
+
+# 技能自检
+bash skills/auto-skill-evolver/scripts/self_check.sh
+
+# 每日热榜
+bash skills/daily-hot-push/push.sh
+```
+
+### 进化数据位置
+- 进化日志：`memory/evolution/YYYY-MM-DD.md`
+- 学习记录：`.learnings/LEARNINGS.md`
+- 错误记录：`.learnings/ERRORS.md`
+
+---
+
+## 📰 已集成的实用Skill
+
+| Skill | 用途 | 路径 |
+|:---|:---|:---|
+| linfeng-novel | 番茄签约规范 | skills/linfeng-novel/ |
+| ai-evolution-engine-v2 | 自我进化 | skills/ai-evolution-engine-v2/ |
+| auto-skill-evolver | 技能迭代 | skills/auto-skill-evolver/ |
+| self-improving | 自我提升 | skills/self-improving/ |
+| daily-hot-push | 热榜推送 | skills/daily-hot-push/ |
+| brave-search | 搜索工具 | skills/brave-search/ |
+| ai-news-zh | AI新闻 | skills/ai-news-zh/ |
 
 ---
 
