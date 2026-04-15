@@ -728,6 +728,14 @@
     "character-profile-cn": {
       "version": "1.0.0",
       "installedAt": 1776001231825
+    },
+    "humanizer-zh": {
+      "version": "1.0.0",
+      "installedAt": 1776247141335
+    },
+    "cq-novel-writer": {
+      "version": "1.0.0",
+      "installedAt": 1776247201213
     }
   }
 }
