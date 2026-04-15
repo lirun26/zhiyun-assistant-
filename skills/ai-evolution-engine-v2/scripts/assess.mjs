@@ -11,7 +11,7 @@ try {
   console.log('📊 能力清单:');
   console.log('  工具: exec, read, write, web_fetch, browser');
   
-  const skillsDir = process.cwd() + '/skills';
+  const skillsDir = '/home/admin/.openclaw/workspace/skills';
   let skillsCount = 0;
   try {
     skillsCount = fs.readdirSync(skillsDir).filter(f => {
